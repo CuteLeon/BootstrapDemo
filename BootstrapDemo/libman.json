@@ -4,10 +4,6 @@
   "libraries": [
     {
       "library": "twitter-bootstrap@4.5.2",
-      "destination": "wwwroot/lib/bootstrap/"
-    },
-    {
-      "library": "twitter-bootstrap@4.5.2",
       "destination": "wwwroot/lib/bootstrap/",
       "files": [
         "js/bootstrap.min.js",
@@ -20,6 +16,14 @@
         "css/bootstrap-reboot.min.css",
         "css/bootstrap.css",
         "css/bootstrap.min.css"
+      ]
+    },
+    {
+      "library": "jquery@3.5.1",
+      "destination": "wwwroot/lib/jquery/",
+      "files": [
+        "jquery.min.js",
+        "jquery.js"
       ]
     }
   ]
