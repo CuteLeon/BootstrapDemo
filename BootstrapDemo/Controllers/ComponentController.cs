@@ -8,5 +8,10 @@ namespace BootstrapDemo.Controllers
         {
             return View();
         }
+
+        public IActionResult Badge()
+        {
+            return View();
+        }
     }
 }
