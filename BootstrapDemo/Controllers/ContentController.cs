@@ -18,5 +18,10 @@ namespace BootstrapDemo.Controllers
         {
             return View();
         }
+
+        public IActionResult Image()
+        {
+            return View();
+        }
     }
 }
