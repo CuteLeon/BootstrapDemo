@@ -25,6 +25,10 @@
         "jquery.min.js",
         "jquery.js"
       ]
+    },
+    {
+      "library": "font-awesome@5.14.0",
+      "destination": "wwwroot/lib/font-awesome/"
     }
   ]
 }
