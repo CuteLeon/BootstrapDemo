@@ -1,0 +1,127 @@
+﻿<div class="m-5 fixed-bottom text-right">
+    <div class="btn-group-vertical shadow-lg btn-group-lg">
+        <button class="btn btn-danger expandButton"><i class="fas fa-expand"></i></button>
+        <button class="btn btn-success exchangeButton"><i class="fas fa-exchange-alt"></i></button>
+        <button class="btn btn-primary compressButton"><i class="fas fa-compress"></i></button>
+    </div>
+</div>
+
+<div class="container">
+    <p class="display-4">折叠</p>
+    <h4>使用 button 和 a 标签展开和折叠一个区域</h4>
+    <div>
+        <div class="my-3">
+            <a class="btn btn-primary" data-toggle="collapse" href="#collapseId1" role="button" aria-expanded="true" aria-controls="collapseId1">
+                <i class="fas fa-expand-arrows-alt"></i> 使用链接和 href
+            </a>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseId1" aria-expanded="true" aria-controls="collapseId1">
+                <i class="fas fa-compress-arrows-alt"></i> 使用按钮和 data-target
+            </button>
+        </div>
+        <div class="collapse show" id="collapseId1">
+            <div class="card card-body">
+                灵魂是在悬崖上诞生的，因为这是我们积累了多么高的生命的土地等等。没有海尔维特咖啡，没有工匠相信他们会失去它。
+            </div>
+        </div>
+    </div>
+    <hr />
+
+    <h4>使用 button 和 a 标签展开和折叠多个区域</h4>
+    <div>
+        <div class="my-3">
+            <a class="btn btn-primary" data-toggle="collapse" href="#collapseIdA" role="button" aria-expanded="false" aria-controls="collapseIdA">切换第一个</a>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseIdB" aria-expanded="false" aria-controls="collapseIdB">切换第二个</button>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseA collapseB">按钮切换全部</button>
+            <a class="btn btn-primary" data-toggle="collapse" href=".multi-collapse" role="button" aria-expanded="false" aria-controls="collapseA">链接切换全部</a>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="collapse multi-collapse show" id="collapseIdA">
+                    <div class="card card-body">
+                        灵魂是在悬崖上诞生的，因为这是我们积累了多么高的生命的土地等等。没有海尔维特咖啡，没有工匠相信他们会失去它。
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="collapse multi-collapse show" id="collapseIdB">
+                    <div class="card card-body">
+                        灵魂是在悬崖上诞生的，因为这是我们积累了多么高的生命的土地等等。没有海尔维特咖啡，没有工匠相信他们会失去它。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+
+    <h4>手风琴效果</h4>
+    <div class="accordion" id="accordionId1">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne">
+                    <i class="fas fa-chevron-circle-down"></i> 手风琴1 标题
+                </button>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionId1">
+                <div class="card-body">
+                    灵魂是在悬崖上诞生的，因为这是我们积累了多么高的生命的土地等等。没有海尔维特咖啡，没有工匠相信他们会失去它。
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo">
+                    <i class="fas fa-chevron-circle-down"></i> 手风琴2 标题
+                </button>
+            </div>
+
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionId1">
+                <div class="card-body">
+                    需要为 collapse 类设置 data-parent="#accordionId"
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree">
+                    <i class="fas fa-chevron-circle-down"></i> 手风琴3 标题
+                </button>
+            </div>
+
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionId1">
+                <div class="card-body">
+                    需要为 button 类设置 data-toggle="collapse" data-target="#collapseId"
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('.expandButton').on('click', (e) => {
+                $('.collapse').collapse('show')
+            });
+            $('.exchangeButton').on('click', (e) => {
+                $('.collapse').collapse('toggle')
+            });
+            $('.compressButton').on('click', (e) => {
+                $('.collapse').collapse('hide')
+            });
+
+            $('.collapse').on('show.bs.collapse', function (e) {
+                console.log(`${e.target.id} showing...`);
+            })
+            $('.collapse').on('shown.bs.collapse', function (e) {
+                console.log(`${e.target.id} shown.`);
+            })
+            $('.collapse').on('hide.bs.collapse', function (e) {
+                console.log(`${e.target.id} hiding...`);
+            })
+            $('.collapse').on('hidden.bs.collapse', function (e) {
+                console.log(`${e.target.id} hidden.`);
+            })
+        })
+    </script>
+}

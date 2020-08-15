@@ -38,5 +38,10 @@ namespace BootstrapDemo.Controllers
         {
             return View();
         }
+
+        public IActionResult Collapse()
+        {
+            return View();
+        }
     }
 }
