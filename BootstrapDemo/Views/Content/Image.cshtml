@@ -1,40 +1,51 @@
-﻿<div class="container text-center">
-    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-3">
-        <div class="col">
-            <img src="~/image/Dream.jpg" class="img-fluid" alt="响应式图片" />
+﻿<div class="container">
+    <p class="display-4">图片</p>
+    <div class="text-center">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-3">
+            <div class="col">
+                <h4>默认样式的图片</h4>
+                <img src="~/image/Dream.jpg" class="img-fluid" alt="响应式图片" />
+            </div>
+            <div class="col">
+                <h4>带有边框的图片</h4>
+                <img src="~/image/Dream.jpg" class="img-fluid border border-primary rounded shadow" alt="响应式图片" />
+            </div>
+            <div class="col">
+                <h4>裁剪为圆形的图片</h4>
+                <img src="~/image/Dream.jpg" class="img-fluid rounded-circle border border-danger shadow-lg" alt="响应式图片" />
+            </div>
         </div>
-        <div class="col">
-            <img src="~/image/Dream.jpg" class="img-fluid border border-primary rounded shadow" alt="响应式图片" />
-        </div>
-        <div class="col">
-            <img src="~/image/Dream.jpg" class="img-fluid rounded-circle border border-danger shadow-lg" alt="响应式图片" />
-        </div>
-    </div>
-    <hr />
+        <hr />
 
-    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-3">
-        <div class="col">
-            <img src="~/image/Dream.jpg" class="img-thumbnail shadow" alt="缩略图片" />
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-3">
+            <div class="col">
+                <h4>默认样式的缩略图</h4>
+                <img src="~/image/Dream.jpg" class="img-thumbnail shadow" alt="缩略图片" />
+            </div>
+            <div class="col">
+                <h4>裁剪为圆形的缩略图</h4>
+                <img src="~/image/Dream.jpg" class="img-thumbnail rounded-circle shadow" alt="缩略图片" />
+            </div>
+            <div class="col">
+                <h4>带有边框的缩略图</h4>
+                <img src="~/image/Dream.jpg" class="img-thumbnail border-warning shadow" alt="缩略图片" />
+            </div>
         </div>
-        <div class="col">
-            <img src="~/image/Dream.jpg" class="img-thumbnail rounded-circle shadow" alt="缩略图片" />
-        </div>
-        <div class="col">
-            <img src="~/image/Dream.jpg" class="img-thumbnail border-warning shadow" alt="缩略图片" />
-        </div>
-    </div>
-    <hr />
+        <hr />
 
-    <div class="row">
-        <div class="col">
-            <img src="~/image/Dream.jpg" class="img rounded-circle border border-dark shadow float-md-left float-sm-none" alt="缩略图片" />
+        <h4>浮动的的缩略图</h4>
+        <div class="row">
+            <div class="col">
+                <img src="~/image/Dream.jpg" class="img rounded-circle border border-dark shadow float-md-left float-sm-none" alt="缩略图片" />
+            </div>
+            <div class="col">
+                <img src="~/image/Dream.jpg" class="img rounded-circle border border-dark shadow float-md-right float-sm-none" alt="缩略图片" />
+            </div>
         </div>
-        <div class="col">
-            <img src="~/image/Dream.jpg" class="img rounded-circle border border-dark shadow float-md-right float-sm-none" alt="缩略图片" />
-        </div>
+        <hr />
     </div>
-    <hr />
 
+    <h4>浮动的的缩略图</h4>
     <div class="row">
         <div class="col">
             @* d-block 打断行，mx-auto 自动调整外部水平边距以居中，二者配合使用 *@

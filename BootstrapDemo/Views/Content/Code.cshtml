@@ -1,10 +1,13 @@
 ﻿<div class="container">
+    <p class="display-4">代码</p>
     <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2">
         <div class="col border border-warning rounded my-2 shadow">
+            <h4>行内代码</h4>
             <p>行内代码 <code>&lt;section&gt;</code> 行内代码</p>
             <p>行内代码 <code>var result = function(input);</code> 行内代码</p>
         </div>
         <div class="col border border-warning rounded my-2 shadow">
+            <h4>多行代码</h4>
             <pre><code>// 使用 pre 标签容纳多行代码
 var <var>input</var> = new Input("parameter");
 var <var>result</var> = function(input);
@@ -14,6 +17,7 @@ return result;
     </div>
     <div class="row">
         <div class="col border border-warning rounded my-2 shadow">
+            <h4>带滚动条的多行代码</h4>
             <pre class="pre-scrollable"><code>// 使用 pre-scrollable 类为多行代码显示滚动条
 var <var>input</var> = new Input() { Parameter = "input parameter." };
 var <var>result</var> = tempResult ?? function(input);
@@ -25,9 +29,11 @@ return result ?? throw new Exception("Result is null.");
 
     <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2">
         <div class="col">
+            <h4>用户输入</h4>
             <p>行内用户输入 <kbd>ctrl+alt+delete</kbd> 行内用户输入</p>
         </div>
         <div class="col">
+            <h4>用户输出</h4>
             <p>行内示例输出 <samp>ctrl+alt+delete</samp> 行内示例输出</p>
         </div>
     </div>

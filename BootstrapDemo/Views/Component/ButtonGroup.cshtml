@@ -1,64 +1,82 @@
-﻿<div class="container text-center">
-    <div class="btn-group btn-group-toggle shadow" data-toggle="buttons">
-        <label class="btn btn-outline-primary">
-            <input type="radio" name="options" id="option1">Option 1
-        </label>
-        <label class="btn btn-outline-danger active">
-            <input type="radio" name="options" id="option2" checked>Option 2
-        </label>
-        <label class="btn btn-outline-warning">
-            <input type="radio" name="options" id="option3">Option 3
-        </label>
-        <label class="btn btn-outline-success">
-            <input type="radio" name="options" id="option4">Option 4
-        </label>
-        <label class="btn btn-outline-info">
-            <input type="radio" name="options" id="option5">Option 5
-        </label>
+﻿<div class="container">
+    <p class="display-4">按钮组</p>
+    <h4>仅可单选的按钮组</h4>
+    <div class="container-fluid text-center">
+        <div class="btn-group btn-group-toggle shadow" data-toggle="buttons">
+            <label class="btn btn-outline-primary">
+                <input type="radio" name="options" id="option1">Option 1
+            </label>
+            <label class="btn btn-outline-danger">
+                <input type="radio" name="options" id="option2">Option 2
+            </label>
+            <label class="btn btn-outline-warning active">
+                <input type="radio" name="options" id="option3" checked>Option 3
+            </label>
+            <label class="btn btn-outline-success">
+                <input type="radio" name="options" id="option4">Option 4
+            </label>
+            <label class="btn btn-outline-info">
+                <input type="radio" name="options" id="option5">Option 5
+            </label>
+        </div>
     </div>
     <hr />
 
-    <div class="btn-group shadow" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-danger">Button</button>
-        <button type="button" class="btn btn-dark">Button</button>
-        <button type="button" class="btn btn-info">Button</button>
-        <button type="button" class="btn btn-light">Button</button>
-        <button type="button" class="btn btn-primary">Button</button>
-        <button type="button" class="btn btn-secondary">Button</button>
-        <button type="button" class="btn btn-success">Button</button>
-        <button type="button" class="btn btn-warning">Button</button>
+    <h4>不同样式的按钮组</h4>
+    <div class="container-fluid text-center">
+        <div class="btn-group shadow" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-danger">Button</button>
+            <button type="button" class="btn btn-dark">Button</button>
+            <button type="button" class="btn btn-info">Button</button>
+            <button type="button" class="btn btn-light">Button</button>
+            <button type="button" class="btn btn-primary">Button</button>
+            <button type="button" class="btn btn-secondary">Button</button>
+            <button type="button" class="btn btn-success">Button</button>
+            <button type="button" class="btn btn-warning">Button</button>
+        </div>
     </div>
     <hr />
 
+    <h4>可以切换激活状态的工具栏按钮组</h4>
     <div class="text-center">
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
             <div class="btn-group" role="group" aria-label="First group">
-                <button type="button" class="btn btn-primary">1</button>
-                <button type="button" class="btn btn-primary">2</button>
-                <button type="button" class="btn btn-primary">3</button>
-                <button type="button" class="btn btn-primary">4</button>
+                <button type="button" data-toggle="button" class="btn btn-primary">1</button>
+                <button type="button" data-toggle="button" class="btn btn-primary">2</button>
+                <button type="button" data-toggle="button" class="btn btn-primary">3</button>
+                <button type="button" data-toggle="button" class="btn btn-primary">4</button>
             </div>
             <div class="mx-1"></div>
-            <div class="btn-group" role="group" aria-label="Third group">
-                <button type="button" class="btn btn-warning">5</button>
-                <button type="button" class="btn btn-warning">6</button>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons" role="group" aria-label="Third group">
+                <label class="btn btn-outline-warning">
+                    <input type="radio" name="options" id="option1">5
+                </label>
+                <label class="btn btn-outline-warning">
+                    <input type="radio" name="options" id="option2">6
+                </label>
             </div>
             <div class="mx-1"></div>
             <div class="btn-group" role="group" aria-label="Second group">
-                <button type="button" class="btn btn-secondary">7</button>
-                <button type="button" class="btn btn-secondary">8</button>
-                <button type="button" class="btn btn-secondary">9</button>
+                <button type="button" data-toggle="button" class="btn btn-secondary">7</button>
+                <button type="button" data-toggle="button" class="btn btn-secondary">8</button>
+                <button type="button" data-toggle="button" class="btn btn-secondary">9</button>
             </div>
             <div class="mx-1"></div>
             <div class="btn-group" role="group" aria-label="Third group">
-                <button type="button" class="btn btn-danger">10</button>
-                <button type="button" class="btn btn-danger">11</button>
+                <button type="button" data-toggle="button" class="btn btn-danger">10</button>
+                <button type="button" data-toggle="button" class="btn btn-danger">11</button>
+            </div>
+            <div class="mx-1"></div>
+            <div class="btn-group" role="group" aria-label="Third group">
+                <button type="button" data-toggle="button" class="btn btn-outline-success">10</button>
+                <button type="button" data-toggle="button" class="btn btn-outline-success">11</button>
             </div>
         </div>
     </div>
     <hr />
 
-    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 row-cols-xl-3">
+    <h4>不同大小的按钮组</h4>
+    <div class="row text-center row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 row-cols-xl-3">
         <div class="col">
             <div class="btn-group btn-group-lg" role="group" aria-label="First group">
                 <button type="button" class="btn btn-primary">1</button>
@@ -92,8 +110,9 @@
     </div>
     <hr />
 
-    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 row-cols-xl-3">
+    <div class="row text-center row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 row-cols-xl-3">
         <div class="col my-2">
+            <h4>带有下拉项的按钮组</h4>
             <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
                 <button type="button" class="btn btn-primary">Button</button>
                 <button type="button" class="btn btn-primary">Button</button>
@@ -102,14 +121,15 @@
                         Dropdown
                     </button>
                     <div class="dropdown-menu bg-primary" aria-labelledby="btnGroupDrop1">
-                        <a class="dropdown-item bg-primary text-white" href="#">Dropdown link</a>
-                        <a class="dropdown-item bg-primary text-white" href="#">Dropdown link</a>
+                        <button class="dropdown-item bg-primary text-white">Dropdown link</button>
+                        <button class="dropdown-item bg-primary text-white">Dropdown link</button>
                     </div>
                 </div>
                 <button type="button" class="btn btn-primary">Button</button>
             </div>
         </div>
         <div class="col my-2">
+            <h4>垂直排列且带有下拉项的按钮组</h4>
             <div class="btn-group-vertical" role="group" aria-label="Button group with nested dropdown">
                 <button type="button" class="btn btn-primary">Button</button>
                 <button type="button" class="btn btn-primary">Button</button>
@@ -118,8 +138,8 @@
                         Dropdown
                     </button>
                     <div class="dropdown-menu bg-primary" aria-labelledby="btnGroupDrop1">
-                        <a class="dropdown-item bg-primary text-white" href="#">Dropdown link</a>
-                        <a class="dropdown-item bg-primary text-white" href="#">Dropdown link</a>
+                        <button class="dropdown-item bg-primary text-white">Dropdown link</button>
+                        <button class="dropdown-item bg-primary text-white">Dropdown link</button>
                     </div>
                 </div>
                 <button type="button" class="btn btn-primary">Button</button>
@@ -127,6 +147,7 @@
             </div>
         </div>
         <div class="col my-2">
+            <h4>垂直排列的按钮组</h4>
             <div class="btn-group-vertical" role="group" aria-label="Button group with nested dropdown">
                 <button type="button" class="btn btn-primary">Button</button>
                 <button type="button" class="btn btn-primary">Button</button>

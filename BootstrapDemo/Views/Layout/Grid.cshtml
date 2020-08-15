@@ -1,4 +1,8 @@
-﻿@* container 类用于响应式的容器 *@
+﻿<div class="container">
+    <p class="display-4">栅格</p>
+    <h4>响应式的容器</h4>
+</div>
+@* container 类用于响应式的容器 *@
 <div class="container bg-info border border-danger">
     <span>container</span>
 </div>
@@ -16,6 +20,9 @@
 </div>
 <hr />
 
+<div class="container">
+    <h4>100%宽度的容器</h4>
+</div>
 @* container 类用于100%宽度的容器 *@
 <div class="container-fluid bg-light border border-danger">
     <span>container-fluid</span>
@@ -42,6 +49,7 @@
         Bootstrap 的栅格系统将行划分为12列
         可以不指定具体的每个元素所占用的列数，将自动均分列
     *@
+    <h4>所有列均分的行</h4>
     <div class="row">
         <div class="col border border-primary">col</div>
         <div class="col border border-primary">col</div>
@@ -52,6 +60,7 @@
     <hr />
 
     @* col-auto 根据内容自动适应列 *@
+    <h4>自动适应内容的列</h4>
     <div class="row">
         <div class="col border border-danger">col</div>
         <div class="col border border-danger">col</div>
@@ -62,6 +71,7 @@
     <hr />
 
     @* 使用 row-cols-* 自动控制列数 *@
+    <h4>多个 row-cols-* 类自动控制行的列数</h4>
     <div class="row row-cols-3 row-cols-sm-2 row-cols-lg-6">
         <div class="col border border-secondary">row-col-3 row-cols-sm-2 row-cols-lg-6</div>
         <div class="col border border-secondary">row-col-3 row-cols-sm-2 row-cols-lg-6</div>
@@ -73,6 +83,7 @@
     <hr />
 
     @* 可以使用一个 w-100 类的元素强行打断布局 *@
+    <h4>被强制打断的列</h4>
     <div class="row">
         <div class="col border border-warning">w-100</div>
         <div class="col border border-warning">w-100</div>
@@ -85,6 +96,7 @@
     <hr />
 
     @* 列数不足的行将留空 *@
+    <h4>列数不足的行将留空</h4>
     <div class="row">
         <div class="col-3 border border-success">col-3</div>
         <div class="col-3 border border-success">col-3</div>
@@ -93,6 +105,7 @@
     <hr />
 
     @* 列数超出的行将分拆为多行 *@
+    <h4>列数超出的行将分拆为多行</h4>
     <div class="row">
         <div class="col-5 border border-info">col-5</div>
         <div class="col-5 border border-info">col-5</div>
@@ -101,6 +114,7 @@
     <hr />
 
     @* col 类的列不会有响应式的布局 *@
+    <h4>col 类的列不支持响应式布局</h4>
     <div class="row">
         <div class="col-4 border border-secondary">col</div>
         <div class="col-4 border border-secondary">col</div>
@@ -125,6 +139,7 @@
         0~5=长度
         no-gutters=清除边距效果
     *@
+    <h4>使用 (p|m)[(x|y|t|b|l|r)-[n](1~5|auto)] 控制内外边距</h4>
     <div class="container-fluid px-5">
         <div class="row mx-n5 no-gutters">
             <div class="col-4 px-5 border border-secondary">px-5 mx-n5</div>
@@ -135,7 +150,8 @@
     <hr />
 
     @* 可以为元素指定多个不同的col-类以响应不同设备的显示效果 *@
-    <div class="row">
+    <h4>多个 col-*-* 类的响应式的列</h4>
+    <div class="row mb-2">
         <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 border border-danger">col-sm-6 col-md-4 col-lg-3 col-xl-2</div>
         <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 border border-danger">col-sm-6 col-md-4 col-lg-3 col-xl-2</div>
         <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 border border-danger">col-sm-6 col-md-4 col-lg-3 col-xl-2</div>
@@ -143,8 +159,7 @@
         <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 border border-danger">col-sm-6 col-md-4 col-lg-3 col-xl-2</div>
         <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 border border-danger">col-sm-6 col-md-4 col-lg-3 col-xl-2</div>
     </div>
-    <hr />
-    <div class="row">
+    <div class="row mt-2">
         <div class="col-sm-4 col-md-3 col-lg-2 col-xl-2 border border-danger">col-sm-4 col-md-3 col-lg-2 col-xl-2</div>
         <div class="col-sm-8 col-md-5 col-lg-4 col-xl-4 border border-danger">col-sm-8 col-md-5 col-lg-4 col-xl-4</div>
         <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 border border-danger">col-sm-6 col-md-4 col-lg-3 col-xl-2</div>
@@ -154,48 +169,48 @@
     </div>
     <hr />
 
+    <h4>justify-content-* 水平布局</h4>
     @* justify-content-start 左优先布局 *@
-    <div class="row justify-content-start bg-warning border border-danger">
+    <div class="row mt-1 mb-1 justify-content-start bg-warning border border-danger">
         <div class="col-2 bg-danger border border-warning">col-2</div>
         <div class="col-auto bg-danger border border-warning">col-auto with content in justify-content-start</div>
         <div class="col-2 bg-danger border border-warning">col-2</div>
     </div>
-    <hr />
 
     @* justify-content-around 松弛布局 *@
-    <div class="row justify-content-around bg-warning border border-danger">
+    <div class="row mt-1 mb-1 justify-content-around bg-warning border border-danger">
         <div class="col-2 bg-danger border border-warning">col-2</div>
         <div class="col-auto bg-danger border border-warning">col-auto with content in justify-content-around</div>
         <div class="col-2 bg-danger border border-warning">col-2</div>
     </div>
-    <hr />
 
     @* justify-content-between 左右优先布局 *@
-    <div class="row justify-content-between bg-warning border border-danger">
+    <div class="row mt-1 mb-1 justify-content-between bg-warning border border-danger">
         <div class="col-2 bg-danger border border-warning">col-2</div>
         <div class="col-auto bg-danger border border-warning">col-auto with content in justify-content-between</div>
         <div class="col-2 bg-danger border border-warning">col-2</div>
     </div>
-    <hr />
 
     @* justify-content-center 居中布局 *@
-    <div class="row justify-content-center bg-warning border border-danger">
+    <div class="row mt-1 mb-1 justify-content-center bg-warning border border-danger">
         <div class="col-2 bg-danger border border-warning">col-2</div>
         <div class="col-auto bg-danger border border-warning">col-auto with content in justify-content-center</div>
         <div class="col-2 bg-danger border border-warning">col-2</div>
     </div>
-    <hr />
 
     @* justify-content-end 右优先布局 *@
-    <div class="row justify-content-end bg-warning border border-danger">
+    <div class="row mt-1 mb-1 justify-content-end bg-warning border border-danger">
         <div class="col-2 bg-danger border border-warning">col-2</div>
-        <div class="col-auto bg-danger border border-warning">col-auto with content in justify-content-end</div>
+        mt-1 mb-1 <div class="col-auto bg-danger border border-warning">col-auto with content in justify-content-end</div>
         <div class="col-2 bg-danger border border-warning">col-2</div>
     </div>
     <hr />
 
     @* align-content-* 垂直布局 *@
-    <div class="row align-content-start bg-warning border border-danger" style="height:100px">
+    <h4>align-content-* 垂直布局</h4>
+    <div class="row row-cols-3 align-content-start bg-warning border border-danger" style="height:100px">
+        <div class="col bg-danger border border-warning">row in align-content-start</div>
+        <div class="col bg-danger border border-warning">row in align-content-start</div>
         <div class="col bg-danger border border-warning">row in align-content-start</div>
         <div class="col bg-danger border border-warning">row in align-content-start</div>
         <div class="col bg-danger border border-warning">row in align-content-start</div>
@@ -203,7 +218,9 @@
     </div>
     <hr />
 
-    <div class="row align-content-around bg-warning border border-danger" style="height:100px">
+    <div class="row row-cols-3 align-content-around bg-warning border border-danger" style="height:100px">
+        <div class="col bg-danger border border-warning">row in align-content-around</div>
+        <div class="col bg-danger border border-warning">row in align-content-around</div>
         <div class="col bg-danger border border-warning">row in align-content-around</div>
         <div class="col bg-danger border border-warning">row in align-content-around</div>
         <div class="col bg-danger border border-warning">row in align-content-around</div>
@@ -211,7 +228,9 @@
     </div>
     <hr />
 
-    <div class="row align-content-between bg-warning border border-danger" style="height:100px">
+    <div class="row row-cols-3 align-content-between bg-warning border border-danger" style="height:100px">
+        <div class="col bg-danger border border-warning">row in align-content-between</div>
+        <div class="col bg-danger border border-warning">row in align-content-between</div>
         <div class="col bg-danger border border-warning">row in align-content-between</div>
         <div class="col bg-danger border border-warning">row in align-content-between</div>
         <div class="col bg-danger border border-warning">row in align-content-between</div>
@@ -219,7 +238,9 @@
     </div>
     <hr />
 
-    <div class="row align-content-center bg-warning border border-danger" style="height:100px">
+    <div class="row row-cols-3 align-content-center bg-warning border border-danger" style="height:100px">
+        <div class="col bg-danger border border-warning">row in align-content-center</div>
+        <div class="col bg-danger border border-warning">row in align-content-center</div>
         <div class="col bg-danger border border-warning">row in align-content-center</div>
         <div class="col bg-danger border border-warning">row in align-content-center</div>
         <div class="col bg-danger border border-warning">row in align-content-center</div>
@@ -227,16 +248,31 @@
     </div>
     <hr />
 
-    <div class="row align-content-end bg-warning border border-danger" style="height:100px">
+    <div class="row row-cols-3 align-content-end bg-warning border border-danger" style="height:100px">
         <div class="col bg-danger border border-warning">row in align-content-end</div>
         <div class="col bg-danger border border-warning">row in align-content-end</div>
         <div class="col bg-danger border border-warning">row in align-content-end</div>
         <div class="col bg-danger border border-warning">row in align-content-end</div>
+        <div class="col bg-danger border border-warning">row in align-content-end</div>
+        <div class="col bg-danger border border-warning">row in align-content-end</div>
+    </div>
+    <hr />
+
+    <div class="row row-cols-3 align-content-stretch bg-warning border border-danger" style="height:100px">
+        <div class="col bg-danger border border-warning">row in align-content-stretch</div>
+        <div class="col bg-danger border border-warning">row in align-content-stretch</div>
+        <div class="col bg-danger border border-warning">row in align-content-stretch</div>
+        <div class="col bg-danger border border-warning">row in align-content-stretch</div>
+        <div class="col bg-danger border border-warning">row in align-content-stretch</div>
+        <div class="col bg-danger border border-warning">row in align-content-stretch</div>
     </div>
     <hr />
 
     @* align-items-* 垂直布局 *@
-    <div class="row align-items-start bg-warning border border-danger" style="height:100px">
+    <h4>align-items-* 垂直布局</h4>
+    <div class="row row-cols-3 align-items-start bg-warning border border-danger" style="height:100px">
+        <div class="col bg-danger border border-warning">row in align-items-start</div>
+        <div class="col bg-danger border border-warning">row in align-items-start</div>
         <div class="col bg-danger border border-warning">row in align-items-start</div>
         <div class="col bg-danger border border-warning">row in align-items-start</div>
         <div class="col bg-danger border border-warning">row in align-items-start</div>
@@ -244,7 +280,9 @@
     </div>
     <hr />
 
-    <div class="row align-items-around bg-warning border border-danger" style="height:100px">
+    <div class="row row-cols-3 align-items-baseline bg-warning border border-danger" style="height:100px">
+        <div class="col bg-danger border border-warning">row in align-items-around</div>
+        <div class="col bg-danger border border-warning">row in align-items-around</div>
         <div class="col bg-danger border border-warning">row in align-items-around</div>
         <div class="col bg-danger border border-warning">row in align-items-around</div>
         <div class="col bg-danger border border-warning">row in align-items-around</div>
@@ -252,7 +290,9 @@
     </div>
     <hr />
 
-    <div class="row align-items-between bg-warning border border-danger" style="height:100px">
+    <div class="row row-cols-3 align-items-between bg-warning border border-danger" style="height:100px">
+        <div class="col bg-danger border border-warning">row in align-items-between</div>
+        <div class="col bg-danger border border-warning">row in align-items-between</div>
         <div class="col bg-danger border border-warning">row in align-items-between</div>
         <div class="col bg-danger border border-warning">row in align-items-between</div>
         <div class="col bg-danger border border-warning">row in align-items-between</div>
@@ -260,7 +300,9 @@
     </div>
     <hr />
 
-    <div class="row align-items-center bg-warning border border-danger" style="height:100px">
+    <div class="row row-cols-3 align-items-center bg-warning border border-danger" style="height:100px">
+        <div class="col bg-danger border border-warning">row in align-items-center</div>
+        <div class="col bg-danger border border-warning">row in align-items-center</div>
         <div class="col bg-danger border border-warning">row in align-items-center</div>
         <div class="col bg-danger border border-warning">row in align-items-center</div>
         <div class="col bg-danger border border-warning">row in align-items-center</div>
@@ -268,24 +310,40 @@
     </div>
     <hr />
 
-    <div class="row align-items-end bg-warning border border-danger" style="height:100px">
+    <div class="row row-cols-3 align-items-end bg-warning border border-danger" style="height:100px">
         <div class="col bg-danger border border-warning">row in align-items-end</div>
         <div class="col bg-danger border border-warning">row in align-items-end</div>
         <div class="col bg-danger border border-warning">row in align-items-end</div>
         <div class="col bg-danger border border-warning">row in align-items-end</div>
+        <div class="col bg-danger border border-warning">row in align-items-end</div>
+        <div class="col bg-danger border border-warning">row in align-items-end</div>
+    </div>
+    <hr />
+
+    <div class="row row-cols-3 align-items-stretch bg-warning border border-danger" style="height:100px">
+        <div class="col bg-danger border border-warning">row in align-items-stretch</div>
+        <div class="col bg-danger border border-warning">row in align-items-stretch</div>
+        <div class="col bg-danger border border-warning">row in align-items-stretch</div>
+        <div class="col bg-danger border border-warning">row in align-items-stretch</div>
+        <div class="col bg-danger border border-warning">row in align-items-stretch</div>
+        <div class="col bg-danger border border-warning">row in align-items-stretch</div>
     </div>
     <hr />
 
     @* align-self-* *@
+    <h4>align-self-* 自布局</h4>
     <div class="row bg-warning border border-danger" style="height:100px">
         <div class="col align-self-start bg-danger border border-warning">col in align-self-start</div>
         <div class="col align-self-center bg-danger border border-warning">col in align-self-center</div>
-        <div class="col align-self-center bg-danger border border-warning">col in align-self-center</div>
+        <div class="col align-self-auto bg-danger border border-warning">col in align-self-auto</div>
+        <div class="col align-self-baseline bg-danger border border-warning">col in align-self-baseline</div>
+        <div class="col align-self-stretch bg-danger border border-warning">col in align-self-stretch</div>
         <div class="col align-self-end bg-danger border border-warning">col in align-self-end</div>
     </div>
     <hr />
 
     @* order-* *@
+    <h4>order-* 列排序</h4>
     <div class="row bg-warning border border-danger">
         <div class="col bg-danger border border-warning">1th no order-*</div>
         <div class="col order-12 bg-danger border border-warning">2th order-12</div>
@@ -298,6 +356,7 @@
     <hr />
 
     @* offset-* *@
+    <h4>offset-* 列偏移</h4>
     <div class="row bg-warning border border-danger">
         <div class="col-4 bg-danger border border-warning">col-4</div>
         <div class="col-4 offset-4 bg-danger border border-warning">col-4 offset-4</div>
@@ -312,11 +371,12 @@
     <hr />
 
     @* col 可以嵌套 row，每个新的row仍然可以有12列 *@
+    <h4>列可以嵌套</h4>
     <div class="row bg-warning border border-danger">
         <div class="col-4 bg-danger border border-warning">col-4</div>
         <div class="col-8 bg-danger border border-warning">
             <div class="row">
-                <div class="col-4 bg-info border border-warning">col-4</div>
+                <div class="col-4 bg-info border border-warning">col-4<br />col-4</div>
                 <div class="col-4 bg-danger border border-warning">col-4</div>
                 <div class="col-4 bg-success border border-warning">col-4</div>
             </div>
