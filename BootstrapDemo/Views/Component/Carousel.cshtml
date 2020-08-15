@@ -1,8 +1,10 @@
 ﻿<div class="m-5 fixed-bottom text-right">
     <div class="btn-group shadow-lg btn-group-lg">
-        <button class="btn btn-danger"><i class="fas fa-backward"></i></button>
-        <button class="btn btn-warning"><i class="fas fa-play"></i></button>
-        <button class="btn btn-primary"><i class="fas fa-forward"></i></button>
+        <button class="btn btn-outline-danger stepBackwardButton"><i class="fas fa-step-backward"></i></button>
+        <button class="btn btn-danger backwardButton"><i class="fas fa-backward"></i></button>
+        <button class="btn btn-warning playButton"><i class="fas fa-pause playButtonContent"></i></button>
+        <button class="btn btn-primary forwardButton"><i class="fas fa-forward"></i></button>
+        <button class="btn btn-outline-primary stepForwardButton"><i class="fas fa-step-forward"></i></button>
     </div>
 </div>
 
@@ -233,3 +235,38 @@
         </div>
     </div>
 </div>
+
+@section Scripts{
+    <script>
+        let playing = true;
+        let playButtonContent = $('.playButtonContent');
+
+        $(document).ready(function () {
+            $('.stepBackwardButton').on('click', (e) => {
+                $('.carousel').carousel(0);
+            });
+            $('.backwardButton').on('click', (e) => {
+                $('.carousel').carousel('prev');
+            });
+            $('.forwardButton').on('click', (e) => {
+                $('.carousel').carousel('next');
+            });
+            $('.stepForwardButton').on('click', (e) => {
+                $('.carousel').carousel(4);
+            });
+            $('.playButton').on('click', (e) => {
+                if (playing) {
+                    playButtonContent.removeClass('fa-pause');
+                    playButtonContent.addClass('fa-play');
+                    $('.carousel').carousel('pause');
+                } else {
+                    playButtonContent.removeClass('fa-play');
+                    playButtonContent.addClass('fa-pause');
+                    $('.carousel').carousel('cycle');
+                }
+
+                playing = !playing;
+            });
+        })
+    </script>
+}
