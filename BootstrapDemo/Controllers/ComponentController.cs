@@ -53,5 +53,10 @@ namespace BootstrapDemo.Controllers
         {
             return View();
         }
+
+        public IActionResult InputGroup()
+        {
+            return View();
+        }
     }
 }
