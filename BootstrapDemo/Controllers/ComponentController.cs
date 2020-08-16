@@ -58,5 +58,10 @@ namespace BootstrapDemo.Controllers
         {
             return View();
         }
+
+        public IActionResult Jumbotron()
+        {
+            return View();
+        }
     }
 }
