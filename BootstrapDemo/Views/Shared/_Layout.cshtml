@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 fixed-top">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BootstrapDemo</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -89,6 +89,9 @@
                                 <a class="dropdown-item text-dark" asp-area="" asp-controller="Component" asp-action="Form">
                                     <span class="fas fa-i-cursor px-1"></span> 表单
                                 </a>
+                                <a class="dropdown-item text-dark" asp-area="" asp-controller="Component" asp-action="Modal">
+                                    <span class="fas fa-minus-square"></span> 模态窗口
+                                </a>
                                 <a class="dropdown-item text-dark" asp-area="" asp-controller="Component" asp-action="Jumbotron">
                                     <span class="fas fa-window-maximize"></span> 巨幕
                                 </a>
@@ -113,7 +116,7 @@
             </div>
         </nav>
     </header>
-    <div class="container-fluid">
+    <div class="container-fluid mt-5 pt-2">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

@@ -73,5 +73,10 @@ namespace BootstrapDemo.Controllers
         {
             return View();
         }
+
+        public IActionResult Modal()
+        {
+            return View();
+        }
     }
 }

@@ -1,0 +1,427 @@
+﻿<div class="m-5 fixed-bottom text-right">
+    <div class="btn-group-vertical shadow-lg btn-group-lg">
+        <button class="btn btn-danger expandButton"><i class="fas fa-expand"></i></button>
+        <button class="btn btn-success exchangeButton"><i class="fas fa-exchange-alt"></i></button>
+        <button class="btn btn-primary compressButton"><i class="fas fa-compress"></i></button>
+    </div>
+</div>
+
+<div class="container">
+    <p class="display-4">模态窗口</p>
+    <h4>模态窗口不支持嵌套，同时只可以显示一个模态窗口</h4>
+    <hr />
+
+    <h4>点击弹出模态窗口，点击背景自动关闭</h4>
+    <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
+                弹出模态窗口
+            </button>
+        </li>
+        <li class="list-inline-item">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
+                弹出模态窗口
+            </button>
+        </li>
+        <li class="list-inline-item">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
+                弹出模态窗口
+            </button>
+        </li>
+    </ul>
+
+    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">标题</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-auto">
+                            <i class="fas fa-4x fa-info-circle text-primary m-2"></i>
+                        </div>
+                        <div class="col">
+                            模态窗口内容，点击背景自动关闭模态窗口。<br />
+                            模态窗口内容，点击背景自动关闭模态窗口。<br />
+                            模态窗口内容，点击背景自动关闭模态窗口。
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+
+    <h4>点击弹出模态窗口，点击背景无法关闭</h4>
+    <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+                弹出模态窗口
+            </button>
+        </li>
+        <li class="list-inline-item">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+                弹出模态窗口
+            </button>
+        </li>
+        <li class="list-inline-item">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+                弹出模态窗口
+            </button>
+        </li>
+    </ul>
+
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">标题</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-auto">
+                            <i class="fas fa-4x fa-exclamation-triangle text-warning m-2"></i>
+                        </div>
+                        <div class="col">
+                            模态窗口内容，点击背景无法关闭模态窗口。<br />
+                            模态窗口内容，点击背景无法关闭模态窗口。<br />
+                            模态窗口内容，点击背景无法关闭模态窗口。
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+
+    <h4>内容过长的模态窗口会自动显示滚动条</h4>
+    <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3">
+                使用页面滚动条的模态窗口
+            </button>
+        </li>
+        <li class="list-inline-item">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal4">
+                使用自身滚动条的模态窗口
+            </button>
+        </li>
+    </ul>
+
+    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">标题</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <ul class="list-unstyled text-center">
+                            <li><img src="~/image/Dream.jpg" class="img-thumbnail rounded-circle" /></li>
+                            <li><img src="~/image/Divider.png" class="img-fluid rounded-pill" /></li>
+                            <li><img src="~/image/LeonMathilda.jpg" class="img-thumbnail rounded-pill" /></li>
+                            <li><img src="~/image/Divider.png" class="img-fluid rounded-pill" /></li>
+                            <li><img src="~/image/Mathilda.jpg" class="img-thumbnail rounded-pill" /></li>
+                            <li><img src="~/image/Divider.png" class="img-fluid rounded-pill" /></li>
+                            <li><img src="~/image/MathildaLeon.jpg" class="img-thumbnail rounded-pill" /></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">标题</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <ul class="list-unstyled text-center">
+                            <li><img src="~/image/Dream.jpg" class="img-thumbnail rounded-circle" /></li>
+                            <li><img src="~/image/Divider.png" class="img-fluid rounded-pill" /></li>
+                            <li><img src="~/image/LeonMathilda.jpg" class="img-thumbnail rounded-pill" /></li>
+                            <li><img src="~/image/Divider.png" class="img-fluid rounded-pill" /></li>
+                            <li><img src="~/image/Mathilda.jpg" class="img-thumbnail rounded-pill" /></li>
+                            <li><img src="~/image/Divider.png" class="img-fluid rounded-pill" /></li>
+                            <li><img src="~/image/MathildaLeon.jpg" class="img-thumbnail rounded-pill" /></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+
+    <h4>垂直居中的模态窗口</h4>
+    <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal5">
+                垂直居中模态窗口
+            </button>
+        </li>
+        <li class="list-inline-item">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal6">
+                垂直居中长内容模态窗口
+            </button>
+        </li>
+    </ul>
+
+    <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">标题</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-auto">
+                            <i class="fas fa-4x fa-info-circle text-primary m-2"></i>
+                        </div>
+                        <div class="col">
+                            模态窗口内容，点击背景自动关闭模态窗口。<br />
+                            模态窗口内容，点击背景自动关闭模态窗口。<br />
+                            模态窗口内容，点击背景自动关闭模态窗口。
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">标题</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <ul class="list-unstyled text-center">
+                            <li><img src="~/image/Dream.jpg" class="img-thumbnail rounded-circle" /></li>
+                            <li><img src="~/image/Divider.png" class="img-fluid rounded-pill" /></li>
+                            <li><img src="~/image/LeonMathilda.jpg" class="img-thumbnail rounded-pill" /></li>
+                            <li><img src="~/image/Divider.png" class="img-fluid rounded-pill" /></li>
+                            <li><img src="~/image/Mathilda.jpg" class="img-thumbnail rounded-pill" /></li>
+                            <li><img src="~/image/Divider.png" class="img-fluid rounded-pill" /></li>
+                            <li><img src="~/image/MathildaLeon.jpg" class="img-thumbnail rounded-pill" /></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+
+    <h4>不同尺寸的模态窗口</h4>
+    <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal7">
+                小型模态窗口
+            </button>
+        </li>
+        <li class="list-inline-item">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal8">
+                正常模态窗口
+            </button>
+        </li>
+        <li class="list-inline-item">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal9">
+                大型模态窗口
+            </button>
+        </li>
+        <li class="list-inline-item">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal10">
+                超大型模态窗口
+            </button>
+        </li>
+    </ul>
+
+    <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">标题</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-auto">
+                            <i class="fas fa-4x fa-info-circle text-primary m-2"></i>
+                        </div>
+                        <div class="col">
+                            模态窗口内容。<br />
+                            模态窗口内容。<br />
+                            模态窗口内容。
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">标题</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-auto">
+                            <i class="fas fa-4x fa-info-circle text-primary m-2"></i>
+                        </div>
+                        <div class="col">
+                            模态窗口内容，点击背景自动关闭模态窗口。<br />
+                            模态窗口内容，点击背景自动关闭模态窗口。<br />
+                            模态窗口内容，点击背景自动关闭模态窗口。
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">标题</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-auto">
+                            <i class="fas fa-4x fa-info-circle text-primary m-2"></i>
+                        </div>
+                        <div class="col">
+                            模态窗口内容，点击背景自动关闭模态窗口。<br />
+                            模态窗口内容，点击背景自动关闭模态窗口。<br />
+                            模态窗口内容，点击背景自动关闭模态窗口。
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">标题</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-auto">
+                            <i class="fas fa-4x fa-info-circle text-primary m-2"></i>
+                        </div>
+                        <div class="col">
+                            模态窗口内容，点击背景自动关闭模态窗口。<br />
+                            模态窗口内容，点击背景自动关闭模态窗口。<br />
+                            模态窗口内容，点击背景自动关闭模态窗口。
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('.expandButton').on('click', (e) => {
+                $('.modal').modal('show')
+            });
+            $('.exchangeButton').on('click', (e) => {
+                $('.modal').modal('toggle')
+            });
+            $('.compressButton').on('click', (e) => {
+                $('.modal').modal('hide')
+            });
+
+            $('.modal').on('show.bs.modal', function (e) {
+                console.log(`${e.target.id} showing...`);
+            })
+            $('.modal').on('shown.bs.modal', function (e) {
+                console.log(`${e.target.id} shown.`);
+            })
+            $('.modal').on('hide.bs.modal', function (e) {
+                console.log(`${e.target.id} hiding...`);
+            })
+            $('.modal').on('hidden.bs.modal', function (e) {
+                console.log(`${e.target.id} hidden.`);
+            })
+            $('.modal').on('hidePrevented.bs.modal', function (e) {
+                console.log(`${e.target.id} hide prevented.`);
+            })
+        })
+    </script>
+}
