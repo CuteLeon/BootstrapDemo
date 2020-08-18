@@ -83,5 +83,10 @@ namespace BootstrapDemo.Controllers
         {
             return View();
         }
+
+        public IActionResult NavBar()
+        {
+            return View();
+        }
     }
 }

@@ -1,0 +1,298 @@
+﻿<div class="container">
+    <p class="display-4">导航栏</p>
+    <h4>导航栏需要一个 navbar 类 和 navbar-expand-* 来包装响应式折叠</h4>
+    <h4>导航栏在打印时默认隐藏，通过 d-print 强制打印</h4>
+    <h4>通过 fixed-top 强制强制导航栏永远浮动在顶部显示，但要给主体容器添加 mt-5 pt-2 以避免导航栏遮挡内容</h4>
+    <hr />
+</div>
+
+<h4>一个占满宽度的响应式导航栏</h4>
+<nav class="navbar navbar-expand-lg rounded-pill navbar-light bg-light border border-white shadow px-3">
+    <a class="navbar-brand" href="https://github.com/CuteLeon">
+        <i class="fas fa-certificate text-warning"></i> CuteLeon
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">主页 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">链接</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    菜单
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">功能</a>
+                    <a class="dropdown-item" href="#">报告</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">消息</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">禁用</a>
+            </li>
+        </ul>
+        <span class="navbar-text small mx-2">
+            呜啦啦~
+        </span>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control rounded-pill mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-primary rounded-pill my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+<hr />
+
+<div class="container">
+    <h4>一个包含所有内容的响应式导航栏</h4>
+    <nav class="navbar navbar-expand-lg rounded-pill navbar-light bg-light border border-white shadow px-3">
+        <a class="navbar-brand" href="https://github.com/CuteLeon">
+            <i class="fas fa-certificate text-warning"></i> CuteLeon
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">主页 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">链接</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        菜单
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">功能</a>
+                        <a class="dropdown-item" href="#">报告</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">消息</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">禁用</a>
+                </li>
+            </ul>
+            <span class="navbar-text small mx-2">
+                呜啦啦~
+            </span>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control rounded-pill mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-primary rounded-pill my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <hr />
+
+    <h4>不同主题颜色的导航栏</h4>
+    <nav class="navbar navbar-expand-lg rounded-pill navbar-dark bg-primary shadow px-3 my-2">
+        <a class="navbar-brand" href="https://github.com/CuteLeon">
+            <i class="fas fa-certificate text-warning"></i> CuteLeon
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">主页 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">链接</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        菜单
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">功能</a>
+                        <a class="dropdown-item" href="#">报告</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">消息</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">禁用</a>
+                </li>
+            </ul>
+            <span class="navbar-text small mx-2">
+                呜啦啦~
+            </span>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control rounded-pill mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-primary rounded-pill my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg rounded-pill navbar-light bg-warning shadow px-3 my-2">
+        <a class="navbar-brand" href="https://github.com/CuteLeon">
+            <i class="fas fa-certificate text-warning"></i> CuteLeon
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">主页 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">链接</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        菜单
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">功能</a>
+                        <a class="dropdown-item" href="#">报告</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">消息</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">禁用</a>
+                </li>
+            </ul>
+            <span class="navbar-text small mx-2">
+                呜啦啦~
+            </span>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control rounded-pill mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-primary rounded-pill my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg rounded-pill navbar-dark bg-dark shadow px-3 my-2">
+        <a class="navbar-brand" href="https://github.com/CuteLeon">
+            <i class="fas fa-certificate text-warning"></i> CuteLeon
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">主页 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">链接</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        菜单
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">功能</a>
+                        <a class="dropdown-item" href="#">报告</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">消息</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">禁用</a>
+                </li>
+            </ul>
+            <span class="navbar-text small mx-2">
+                呜啦啦~
+            </span>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control rounded-pill mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-primary rounded-pill my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg rounded-pill border navbar-light bg-white shadow px-3 my-2">
+        <a class="navbar-brand" href="https://github.com/CuteLeon">
+            <i class="fas fa-certificate text-warning"></i> CuteLeon
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">主页 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">链接</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        菜单
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">功能</a>
+                        <a class="dropdown-item" href="#">报告</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">消息</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">禁用</a>
+                </li>
+            </ul>
+            <span class="navbar-text small mx-2">
+                呜啦啦~
+            </span>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control rounded-pill mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-primary rounded-pill my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg rounded-pill navbar-dark bg-danger shadow px-3 my-2">
+        <a class="navbar-brand" href="https://github.com/CuteLeon">
+            <i class="fas fa-certificate text-warning"></i> CuteLeon
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">主页 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">链接</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        菜单
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">功能</a>
+                        <a class="dropdown-item" href="#">报告</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">消息</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">禁用</a>
+                </li>
+            </ul>
+            <span class="navbar-text small mx-2">
+                呜啦啦~
+            </span>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control rounded-pill mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-primary rounded-pill my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <hr />
+</div>
