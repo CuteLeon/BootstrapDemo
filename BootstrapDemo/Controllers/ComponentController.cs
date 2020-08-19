@@ -88,5 +88,10 @@ namespace BootstrapDemo.Controllers
         {
             return View();
         }
+
+        public IActionResult Pagination()
+        {
+            return View();
+        }
     }
 }
