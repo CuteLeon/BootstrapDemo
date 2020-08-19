@@ -1,0 +1,113 @@
+﻿<div class="m-5 fixed-bottom text-right">
+    <div class="btn-group-vertical shadow-lg btn-group-lg">
+        <button class="btn btn-danger expandButton"><i class="fas fa-expand"></i></button>
+        <button class="btn btn-success exchangeButton"><i class="fas fa-exchange-alt"></i></button>
+        <button class="btn btn-primary compressButton"><i class="fas fa-compress"></i></button>
+    </div>
+</div>
+
+<div class="container">
+    <p class="display-4">弹出框</p>
+    <h5 class="text-muted my-3">需要在执行 Bootstrap Javascript 之前引用 Popper.js，或直接引用 bootstrap.bundle.js </h5>
+    <h5 class="text-muted my-3">需要使用 $('[data-toggle="popover"]').popover(); 初始化所有弹出框</h5>
+    <h5 class="text-muted my-3">可以使用 data-container 定义弹出框的容器</h5>
+    <hr />
+
+    <h4>鼠标点击显示弹出框 和 鼠标悬浮显示弹出窗</h4>
+    <div class="row justify-content-around">
+        <button type="button" class="btn btn-danger" data-toggle="popover" title="弹出框标题" data-content="弹出框内容文本">点击显示弹出框</button>
+        <button type="button" class="btn btn-danger" data-toggle="popover" data-trigger="hover" title="弹出框标题" data-content="弹出框内容文本">悬浮显示弹出框</button>
+    </div>
+    <hr />
+
+    <h4>不同方向的弹出框</h4>
+    <ul class="list-inline text-center">
+        <li class="list-inline-item">
+            <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="left" data-content="弹出框的文本内容。">
+                左方弹出框
+            </button>
+        </li>
+        <li class="list-inline-item">
+            <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="top" data-content="弹出框的文本内容。">
+                上方弹出框
+            </button>
+        </li>
+        <li class="list-inline-item">
+            <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="弹出框的文本内容。">
+                下方弹出框
+            </button>
+        </li>
+        <li class="list-inline-item">
+            <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="right" data-content="弹出框的文本内容。">
+                右方弹出框
+            </button>
+        </li>
+    </ul>
+    <hr />
+
+    <h4>点击别处自动隐藏的弹出框</h4>
+    <button type="button" class="btn btn-success" data-toggle="popover" data-trigger="focus" title="弹出框标题" data-content="弹出框内容文本">点击显示弹出框</button>
+    <hr />
+
+    <h4>需要使用容器弹出禁用元素的弹出框</h4>
+    <div class="d-inline-block" data-toggle="popover" data-trigger="hover" title="弹出框标题" data-content="弹出框内容文本">
+        <button class="btn btn-secondary" style="pointer-events: none;" type="button" disabled>禁用按钮</button>
+    </div>
+    <hr />
+
+    <h4>弹出自定义元素</h4>
+    <div class="row justify-content-around">
+        <button id="customePopoverButton1" type="button" class="btn btn-success">点击显示弹出框</button>
+        <button id="customePopoverButton2" type="button" class="btn btn-success">点击显示弹出框</button>
+        <button id="customePopoverButton3" type="button" class="btn btn-success">点击显示弹出框</button>
+        <button id="customePopoverButton4" type="button" data-toggle="popover" title="自定义标题-4" data-content='<img src="/image/Mathilda.jpg" class="img-fluid" />' class="btn btn-success">点击显示弹出框</button>
+    </div>
+    <div class="text-center m-3" id="myContent">
+        <img src="~/image/Mathilda.jpg" class="img-fluid" />
+    </div>
+    <hr />
+    <div class="m-3" id="myTemplate">
+        <div class="popover border border-white shadow-lg" role="tooltip">
+            <div class="arrow text-white"></div>
+            <h3 class="popover-header bg-primary text-white"></h3>
+            <div class="popover-body"></div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="popover"]').popover();
+
+            $('#customePopoverButton1').popover({
+                html: true,
+                title: '自定义标题-1',
+                content: function () {
+                    return $("#myContent").html();
+                }
+            });
+            $('#customePopoverButton2').popover({
+                html: true,
+                title: '自定义标题-2',
+                content: '<img src="/image/Mathilda.jpg" class="img-fluid" />'
+            });
+            $('#customePopoverButton3').popover({
+                html: true,
+                title: '自定义模板-2',
+                template: $('#myTemplate').html(),
+                content: '<img src="/image/Mathilda.jpg" class="img-fluid" />'
+            });
+
+            $('.expandButton').on('click', (e) => {
+                $('[data-toggle="popover"]').popover('show')
+            });
+            $('.exchangeButton').on('click', (e) => {
+                $('[data-toggle="popover"]').popover('toggle')
+            });
+            $('.compressButton').on('click', (e) => {
+                $('[data-toggle="popover"]').popover('hide')
+            });
+        })
+    </script>
+}

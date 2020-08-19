@@ -93,5 +93,10 @@ namespace BootstrapDemo.Controllers
         {
             return View();
         }
+
+        public IActionResult Popover()
+        {
+            return View();
+        }
     }
 }
