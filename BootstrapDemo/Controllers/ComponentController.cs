@@ -98,5 +98,10 @@ namespace BootstrapDemo.Controllers
         {
             return View();
         }
+
+        public IActionResult Progress()
+        {
+            return View();
+        }
     }
 }
