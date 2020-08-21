@@ -6,6 +6,8 @@
     <title>@ViewContext.RouteData.Values["action"] - BootstrapDemo</title>
     <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/regular.min.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/brands.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
@@ -131,6 +133,16 @@
                                         </a>
                                     </div>
                                 </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="fas fa-icons"></span> 图标
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item text-dark" asp-area="" asp-controller="Icon" asp-action="FontAwesome">
+                                    <span class="fab fa-font-awesome-flag"></span> Font-Awesome
+                                </a>
                             </div>
                         </li>
                     </ul>
