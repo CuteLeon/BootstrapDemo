@@ -1,0 +1,321 @@
+﻿<div class="container">
+    <p class="display-4">滚动监听</p>
+    <h5 class="text-muted">需要 Util.js，但已被包含在 bootstrap.js 内</h5>
+    <h5 class="text-muted">滚动监听需要配合导航(nav)和列表组(list-group)组件</h5>
+    <h5 class="text-muted">被监听的元素需要 position: relative，通常是 body 元素</h5>
+    <h5 class="text-muted">如果不是监听 body 元素，需要给元素设置 height 和 overflow-y: scroll</h5>
+    <h5 class="text-muted">还必须使用a标签通过id指定目标元素</h5>
+    <h5 class="text-muted">被滚动到的导航项将会被自动添加 active 类</h5>
+    <hr />
+
+    <h4>导航</h4>
+    <nav id="myNavbar-1" class="navbar rounded-pill border navbar-light bg-light">
+        <a class="navbar-brand" href="#">导航栏</a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="#title-1">标题-1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#title-2">标题-2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#title-3">标题-3</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">菜单</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#menu-1">菜单-1</a>
+                    <a class="dropdown-item" href="#menu-2">菜单-2</a>
+                    <div role="separator" class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#menu-3">菜单-3</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="rounded-lg border m-3" data-spy="scroll" data-target="#myNavbar-1" data-offset="0"
+         style="height:240px; overflow-y:scroll; position:relative">
+        <h4 id="title-1">标题-1</h4>
+        <p>
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容
+        </p>
+        <h4 id="title-2">标题-2</h4>
+        <p>
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容
+        </p>
+        <h4 id="title-3">标题-3</h4>
+        <p>
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容
+        </p>
+        <h4 id="menu-1">菜单-1</h4>
+        <p>
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容
+        </p>
+        <h4 id="menu-2">菜单-2</h4>
+        <p>
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容
+        </p>
+        <h4 id="menu-3">菜单-3</h4>
+        <p>
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容<br />
+            内容
+        </p>
+    </div>
+    <hr />
+
+    <div class="row">
+        <div class="col-3">
+            <nav id="myNavbar-2" class="navbar flex-column navbar-light bg-light">
+                <a class="navbar-brand" href="#">导航栏</a>
+                <nav class="nav nav-pills flex-column">
+                    <a class="nav-link" href="#title_1">标题-1</a>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link ml-3 my-1" href="#title_1-1">标题-1-1</a>
+                        <a class="nav-link ml-3 my-1" href="#title_1-2">标题-1-2</a>
+                    </nav>
+                    <a class="nav-link" href="#title_2">标题-2</a>
+                    <a class="nav-link" href="#title_3">标题-3</a>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link ml-3 my-1" href="#title_3-1">标题-3-1</a>
+                        <a class="nav-link ml-3 my-1" href="#title_3-2">标题-3-2</a>
+                    </nav>
+                </nav>
+            </nav>
+        </div>
+        <div class="col">
+            <div class="rounded-lg border" data-spy="scroll" data-target="#myNavbar-2" data-offset="0"
+                 style="height:372px; overflow-y:scroll; position:relative">
+                <h4 id="title_1">标题-1</h4>
+                <p>
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容
+                </p>
+                <h5 id="title_1-1">标题-1-1</h5>
+                <p>
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容
+                </p>
+                <h5 id="title_1-2">标题-1-2</h5>
+                <p>
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容
+                </p>
+                <h4 id="title_2">标题-2</h4>
+                <p>
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容
+                </p>
+                <h4 id="title_3">标题-3</h4>
+                <p>
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容
+                </p>
+                <h5 id="title_3-1">标题-3-1</h5>
+                <p>
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容
+                </p>
+                <h5 id="title_3-2">标题-3-2</h5>
+                <p>
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容
+                </p>
+            </div>
+        </div>
+    </div>
+    <hr />
+
+    <h4>列表组</h4>
+    <div class="row">
+        <div class="col-3">
+            <div id="myList-1" class="list-group">
+                <a class="list-group-item list-group-item-action" href="#listTile-1">列表标题 1</a>
+                <a class="list-group-item list-group-item-action" href="#listTile-2">列表标题 2</a>
+                <a class="list-group-item list-group-item-action" href="#listTile-3">列表标题 3</a>
+                <a class="list-group-item list-group-item-action" href="#listTile-4">列表标题 4</a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="rounded-lg border" data-spy="scroll" data-target="#myList-1" data-offset="0"
+                 style="height:200px;position:relative;overflow-y:scroll">
+                <h4 id="listTile-1">Item 1</h4>
+                <p>
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容
+                </p>
+                <h4 id="listTile-2">Item 2</h4>
+                <p>
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容
+                </p>
+                <h4 id="listTile-3">Item 3</h4>
+                <p>
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容
+                </p>
+                <h4 id="listTile-4">Item 4</h4>
+                <p>
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容<br />
+                    内容
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
