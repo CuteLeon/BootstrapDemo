@@ -40,36 +40,45 @@
     <h4>可以切换激活状态的工具栏按钮组</h4>
     <div class="text-center">
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-            <div class="btn-group" role="group" aria-label="First group">
-                <button type="button" data-toggle="button" class="btn btn-primary">1</button>
-                <button type="button" data-toggle="button" class="btn btn-primary">2</button>
-                <button type="button" data-toggle="button" class="btn btn-primary">3</button>
-                <button type="button" data-toggle="button" class="btn btn-primary">4</button>
-            </div>
-            <div class="mx-1"></div>
-            <div class="btn-group btn-group-toggle" data-toggle="buttons" role="group" aria-label="Third group">
-                <label class="btn btn-outline-warning">
-                    <input type="radio" name="options" id="option1">5
-                </label>
-                <label class="btn btn-outline-warning">
-                    <input type="radio" name="options" id="option2">6
-                </label>
-            </div>
-            <div class="mx-1"></div>
-            <div class="btn-group" role="group" aria-label="Second group">
-                <button type="button" data-toggle="button" class="btn btn-secondary">7</button>
-                <button type="button" data-toggle="button" class="btn btn-secondary">8</button>
-                <button type="button" data-toggle="button" class="btn btn-secondary">9</button>
-            </div>
-            <div class="mx-1"></div>
-            <div class="btn-group" role="group" aria-label="Third group">
-                <button type="button" data-toggle="button" class="btn btn-danger">10</button>
-                <button type="button" data-toggle="button" class="btn btn-danger">11</button>
-            </div>
-            <div class="mx-1"></div>
-            <div class="btn-group" role="group" aria-label="Third group">
-                <button type="button" data-toggle="button" class="btn btn-outline-success">10</button>
+            <div class="btn-group" role="group" aria-label="1 group">
                 <button type="button" data-toggle="button" class="btn btn-outline-success">11</button>
+                <button type="button" data-toggle="button" class="btn btn-outline-success" aria-pressed="true">10</button>
+                <button type="button" data-toggle="button" class="btn btn-outline-success">11</button>
+                <button type="button" data-toggle="button" class="btn btn-outline-success" aria-pressed="true">10</button>
+            </div>
+            <div class="mx-1"></div>
+
+            <div class="btn-group" role="group" aria-label="2 group">
+                <button type="button" data-toggle="button" class="btn btn-primary">复选</button>
+                <button type="button" data-toggle="button" class="btn btn-primary" aria-pressed="true">复选</button>
+                <button type="button" data-toggle="button" class="btn btn-primary">复选</button>
+                <button type="button" data-toggle="button" class="btn btn-primary" aria-pressed="true">复选</button>
+            </div>
+            <div class="mx-1"></div>
+
+            <div class="btn-group btn-group-toggle" data-toggle="buttons" role="group" aria-label="3 group">
+                <label class="btn btn-outline-warning">
+                    <input type="radio" name="options" id="option2">单选
+                </label>
+                <label class="btn btn-outline-warning">
+                    <input type="radio" name="options" id="option1" checked>单选
+                </label>
+                <label class="btn btn-outline-warning">
+                    <input type="radio" name="options" id="option2">单选
+                </label>
+            </div>
+            <div class="mx-1"></div>
+
+            <div class="btn-group btn-group-toggle" data-toggle="buttons" role="group" aria-label="4 group">
+                <label class="btn btn-danger">
+                    <input type="radio" name="options" id="option2">单选
+                </label>
+                <label class="btn btn-danger">
+                    <input type="radio" name="options" id="option1">单选
+                </label>
+                <label class="btn btn-danger">
+                    <input type="radio" name="options" id="option2" checked>单选
+                </label>
             </div>
         </div>
     </div>

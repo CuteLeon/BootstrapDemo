@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using BootstrapDemo.Services;
+using System.Collections.Generic;
 
 namespace BootstrapDemo.Controllers
 {
@@ -15,10 +16,12 @@ namespace BootstrapDemo.Controllers
 
         public IActionResult FontAwesome()
         {
-            this.ViewData.Add("FAS", FontAwesomeIconScanner.SolidIcons);
-            this.ViewData.Add("FAR", FontAwesomeIconScanner.RegularIcons);
-            this.ViewData.Add("FAB", FontAwesomeIconScanner.BrandIcons);
-            return View();
+            var iconDictionary = new Dictionary<string, HashSet<string>>() {
+                { "fas", FontAwesomeIconScanner.SolidIcons },
+                { "far", FontAwesomeIconScanner.RegularIcons },
+                { "fab", FontAwesomeIconScanner.BrandIcons }
+            };
+            return View(iconDictionary);
         }
     }
 }

@@ -1,64 +1,89 @@
-﻿@{
-    HashSet<string> SolidIcons = null, RegularIcons = null, BrandIcons = null;
-    if (this.ViewData.TryGetValue("FAS", out object solidIcons))
-        SolidIcons = solidIcons as HashSet<string>;
-    if (this.ViewData.TryGetValue("FAR", out object regularIcons))
-        RegularIcons = regularIcons as HashSet<string>;
-    if (this.ViewData.TryGetValue("FAB", out object brandIcons))
-        BrandIcons = brandIcons as HashSet<string>;
+﻿@model Dictionary<string, HashSet<string>>
+
+@if ((this.Model?.Count ?? 0) > 0)
+{
+    <div class="m-5 fixed-bottom" style="width:54px">
+        <div class="btn-group-vertical shadow-lg btn-group-lg">
+            @foreach (var iconSet in this.Model)
+            {
+                var key = iconSet.Key;
+                <button type="button" data-toggle="button" class="btn btn-outline-warning border border-white active" id="@(key)CollapseButton" aria-pressed="true">
+                    @key
+                </button>
+            }
+        </div>
+    </div>
 }
 
 <div class="container">
     <p class="display-4">Font-Awesome</p>
-    @if (SolidIcons != null)
+    <h4>Font-Awesome 需要引用 all.min.css</h4>
+    <h4>Font-Awesome 的品牌 Logo 需要引用 brands.min.css</h4>
+    <h4>Font-Awesome 需要使用使用两个class才可以正确显示图标：(fas|far|fab) 和 fa-.*</h4>
+    <hr />
+
+    @if ((this.Model?.Count ?? 0) == 0)
     {
-        var title = "fas";
-        <p class="display-4">@title</p>
-        <div class="row row-cols-6 text-center">
-            @foreach (var icon in SolidIcons)
-            {
-                <div class="col">
-                    <figure class="figure m-3">
-                        <p class="@title fa-5x fa-@icon figure-img"></p>
-                        <figcaption class="figure-caption text-dark">@title fa-@icon</figcaption>
-                    </figure>
-                </div>
-            }
-        </div>
-        <hr />
+        <p class="display-3 m-5 text-center">没有可以显示的图标</p>
     }
-    @if (RegularIcons != null)
+    else
     {
-        var title = "far";
-        <p class="display-4">@title</p>
-        <div class="row row-cols-6 text-center">
-            @foreach (var icon in RegularIcons)
-            {
-                <div class="col">
-                    <figure class="figure m-3">
-                        <p class="@title fa-5x fa-@icon figure-img"></p>
-                        <figcaption class="figure-caption text-dark">@title fa-@icon</figcaption>
-                    </figure>
+        @foreach (var iconSet in this.Model)
+        {
+            var key = iconSet.Key;
+            <div class="collapse show" id="@(key)Collapse">
+                <p class="display-4">@key <span class="h4 text-muted">@iconSet.Value.Count 个图标</span></p>
+                <div class="row row-cols-md-6 row-cols-4 text-center">
+                    @foreach (var icon in iconSet.Value)
+                    {
+                        <div class="col p-0">
+                            <figure class="figure rounded-lg border border-white p-3">
+                                <p class="@key fa-5x fa-@icon figure-img mb-0"></p>
+                                <figcaption class="figure-caption text-dark">@key fa-@icon</figcaption>
+                            </figure>
+                        </div>
+                    }
                 </div>
-            }
-        </div>
-        <hr />
-    }
-    @if (BrandIcons != null)
-    {
-        var title = "fab";
-        <p class="display-4">@title</p>
-        <div class="row row-cols-6text-center">
-            @foreach (var icon in BrandIcons)
-            {
-                <div class="col">
-                    <figure class="figure m-3">
-                        <p class="@title fa-5x fa-@icon figure-img"></p>
-                        <figcaption class="figure-caption text-dark">@title fa-@icon</figcaption>
-                    </figure>
-                </div>
-            }
-        </div>
-        <hr />
+                <hr />
+            </div>
+        }
     }
 </div>
+
+@if ((this.Model?.Count ?? 0) > 0)
+{
+    @section Scripts{
+        <script>
+            $(document).ready(function () {
+            @foreach (var iconSet in this.Model)
+            {
+                var key = iconSet.Key;
+                <text>
+                $('#@(key)CollapseButton').on('click', (e) =>
+                {
+                    $('#@(key)Collapse').collapse('toggle');
+                });
+                $('.collapse figure p,figcaption').click(e => {
+                    var figure = $(e.target.parentElement);
+                    if (figure.toggleClass('bg-warning'));
+
+                    e.stopImmediatePropagation();
+                });
+                $('.collapse figure p,figcaption').mouseenter(e => {
+                    var figure = $(e.target.parentElement);
+                    figure.addClass('shadow');
+
+                    e.stopImmediatePropagation();
+                });
+                $('.collapse figure p,figcaption').mouseleave(e => {
+                    var figure = $(e.target.parentElement);
+                    figure.removeClass('shadow');
+
+                    e.stopImmediatePropagation();
+                });
+                </text>
+            }
+        })
+        </script>
+    }
+}
