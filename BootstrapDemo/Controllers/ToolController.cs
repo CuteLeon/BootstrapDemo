@@ -28,5 +28,10 @@ namespace BootstrapDemo.Controllers
         {
             return View();
         }
+
+        public IActionResult Embed()
+        {
+            return View();
+        }
     }
 }
