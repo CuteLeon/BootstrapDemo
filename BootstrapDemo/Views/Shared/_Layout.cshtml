@@ -141,12 +141,6 @@
                                             <span class="fas fa-window-maximize"></span> 吐司
                                         </a>
                                     </div>
-                                    <div class="col-auto px-0">
-                                        <div class="dropdown-header">工具</div>
-                                        <a class="dropdown-item text-dark" asp-area="" asp-controller="Tool" asp-action="ScrollSpy">
-                                            <span class="fas fa-scroll"></span> 滚动监听
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
                         </li>
@@ -157,6 +151,19 @@
                             <div class="dropdown-menu">
                                 <a class="dropdown-item text-dark" asp-area="" asp-controller="Icon" asp-action="FontAwesome">
                                     <span class="fab fa-font-awesome-flag"></span> Font-Awesome
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="fas fa-tools"></span> 工具
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item text-dark" asp-area="" asp-controller="Tool" asp-action="ScrollSpy">
+                                    <span class="fas fa-scroll"></span> 滚动监听
+                                </a>
+                                <a class="dropdown-item text-dark" asp-area="" asp-controller="Tool" asp-action="Border">
+                                    <span class="fas fa-border-style"></span> 边框
                                 </a>
                             </div>
                         </li>
