@@ -14,13 +14,13 @@
     {
         var title = "fas";
         <p class="display-4">@title</p>
-        <div class="row row-cols-6">
+        <div class="row row-cols-6 text-center">
             @foreach (var icon in SolidIcons)
             {
                 <div class="col">
                     <figure class="figure m-3">
                         <p class="@title fa-5x fa-@icon figure-img"></p>
-                        <figcaption class="figure-caption text-dark text-center">@title fa-@icon</figcaption>
+                        <figcaption class="figure-caption text-dark">@title fa-@icon</figcaption>
                     </figure>
                 </div>
             }
@@ -31,13 +31,13 @@
     {
         var title = "far";
         <p class="display-4">@title</p>
-        <div class="row row-cols-6">
+        <div class="row row-cols-6 text-center">
             @foreach (var icon in RegularIcons)
             {
                 <div class="col">
                     <figure class="figure m-3">
                         <p class="@title fa-5x fa-@icon figure-img"></p>
-                        <figcaption class="figure-caption text-dark text-center">@title fa-@icon</figcaption>
+                        <figcaption class="figure-caption text-dark">@title fa-@icon</figcaption>
                     </figure>
                 </div>
             }
@@ -48,13 +48,13 @@
     {
         var title = "fab";
         <p class="display-4">@title</p>
-        <div class="row row-cols-6">
+        <div class="row row-cols-6text-center">
             @foreach (var icon in BrandIcons)
             {
                 <div class="col">
                     <figure class="figure m-3">
                         <p class="@title fa-5x fa-@icon figure-img"></p>
-                        <figcaption class="figure-caption text-dark text-center">@title fa-@icon</figcaption>
+                        <figcaption class="figure-caption text-dark">@title fa-@icon</figcaption>
                     </figure>
                 </div>
             }
