@@ -103,5 +103,10 @@ namespace BootstrapDemo.Controllers
         {
             return View();
         }
+
+        public IActionResult Spinner()
+        {
+            return View();
+        }
     }
 }
