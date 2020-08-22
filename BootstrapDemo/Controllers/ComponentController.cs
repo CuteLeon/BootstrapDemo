@@ -108,5 +108,10 @@ namespace BootstrapDemo.Controllers
         {
             return View();
         }
+
+        public IActionResult Toast()
+        {
+            return View();
+        }
     }
 }
