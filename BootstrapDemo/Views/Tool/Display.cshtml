@@ -1,0 +1,66 @@
+﻿<div class="container">
+    <p class="display-4">显示</p>
+    <h4>d-inline 显示在一行内</h4>
+    <div class="container-fluid m-3">
+        <div class="d-inline p-2 bg-primary text-white">d-inline</div>
+        <div class="d-inline p-2 bg-secondary text-white">d-inline</div>
+        <div class="d-inline p-2 bg-info text-white">d-inline</div>
+        <div class="d-inline p-2 bg-light text-dark">d-inline</div>
+        <div class="d-inline p-2 bg-danger text-white">d-inline</div>
+        <div class="d-inline p-2 bg-dark text-white">d-inline</div>
+        <div class="d-inline p-2 bg-success text-white">d-inline</div>
+        <div class="d-inline p-2 bg-warning text-white">d-inline</div>
+    </div>
+    <hr />
+
+    <h4>d-block 显示为块</h4>
+    <div class="container-fluid m-3">
+        <div class="d-block p-2 bg-primary text-white">d-block</div>
+        <div class="d-block p-2 bg-secondary text-white">d-block</div>
+        <div class="d-block p-2 bg-info text-white">d-block</div>
+        <div class="d-block p-2 bg-light text-dark">d-block</div>
+        <div class="d-block p-2 bg-danger text-white">d-block</div>
+        <div class="d-block p-2 bg-dark text-white">d-block</div>
+        <div class="d-block p-2 bg-success text-white">d-block</div>
+        <div class="d-block p-2 bg-warning text-white">d-block</div>
+    </div>
+    <hr />
+
+    <h4>d-{*}-none 响应式隐藏元素</h4>
+    <div class="container-fluid m-3">
+        <div class="m-2 p-2 bg-primary text-white d-none">永远隐藏</div>
+        <div class="m-2 p-2 bg-primary text-white d-none d-sm-block">仅在xs设备隐藏</div>
+        <div class="m-2 p-2 bg-primary text-white d-sm-none d-md-block">仅在sm设备隐藏</div>
+        <div class="m-2 p-2 bg-primary text-white d-md-none d-lg-block">仅在md设备隐藏</div>
+        <div class="m-2 p-2 bg-primary text-white d-lg-none d-xl-block">仅在lg设备隐藏</div>
+        <div class="m-2 p-2 bg-primary text-white d-xl-none">仅在xl设备隐藏</div>
+        <hr />
+
+        <div class="m-2 p-2 bg-warning text-dark d-block">永远显示</div>
+        <div class="m-2 p-2 bg-warning text-dark d-block d-sm-none">仅在xs设备显示</div>
+        <div class="m-2 p-2 bg-warning text-dark d-none d-sm-block d-md-none">仅在sm设备显示</div>
+        <div class="m-2 p-2 bg-warning text-dark d-none d-md-block d-lg-none">仅在md设备显示</div>
+        <div class="m-2 p-2 bg-warning text-dark d-none d-lg-block d-xl-none">仅在lg设备显示</div>
+        <div class="m-2 p-2 bg-warning text-dark d-none d-xl-block">仅在xl设备显示</div>
+        <hr />
+
+        <div class="m-2 p-2 bg-primary text-white d-none">永远隐藏</div>
+        <div class="m-2 p-2 bg-primary text-white d-sm-none">在小于sm的设备显示</div>
+        <div class="m-2 p-2 bg-primary text-white d-md-none">在小于md的设备显示</div>
+        <div class="m-2 p-2 bg-primary text-white d-lg-none">在小于lg的设备显示</div>
+        <div class="m-2 p-2 bg-primary text-white d-xl-none">在小于xl的设备显示</div>
+        <hr />
+
+        <div class="m-2 p-2 bg-primary text-white d-block">永远显示</div>
+        <div class="m-2 p-2 bg-primary text-white d-none d-sm-block">在大于sm的设备显示</div>
+        <div class="m-2 p-2 bg-primary text-white d-none d-md-block">在大于md的设备显示</div>
+        <div class="m-2 p-2 bg-primary text-white d-none d-lg-block">在大于lg的设备显示</div>
+        <div class="m-2 p-2 bg-primary text-white d-none d-xl-block">在大于xl的设备显示</div>
+        <hr />
+    </div>
+    <hr />
+
+    <h4>控制打印时显示</h4>
+    <div class="m-2 p-2 bg-success text-white d-print-none">仅可显示，打印时不显示</div>
+    <div class="m-2 p-2 bg-success text-white d-none d-print-block">不可显示，仅打印时显示</div>
+</div>
