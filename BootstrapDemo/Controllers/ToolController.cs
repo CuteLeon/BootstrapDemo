@@ -33,5 +33,10 @@ namespace BootstrapDemo.Controllers
         {
             return View();
         }
+
+        public IActionResult Flex()
+        {
+            return View();
+        }
     }
 }

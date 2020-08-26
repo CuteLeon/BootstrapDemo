@@ -1,0 +1,871 @@
+﻿<div class="container">
+    <p class="display-4">弹性(Flex)布局</p>
+    <h5 class="text-muted"></h5>
+    <hr />
+    <h4>启用 Flex 行为</h4>
+    <div class="d-flex my-2 p-2 text-white bg-primary">d-flex</div>
+    <div class="d-inline-flex my-2 py-2 px-5 text-white bg-primary">d-inline-flex</div>
+    <hr />
+
+    <h4>响应式 Flex</h4>
+    <div class="d-flex my-2 p-2 text-white bg-success">
+        <div class="p-2 m-1 text-white bg-danger">d-flex</div>
+        <div class="p-2 m-1 text-white bg-danger">永远</div>
+        <div class="p-2 m-1 text-white bg-danger">启用Flex</div>
+    </div>
+    <div class="d-sm-flex my-2 p-2 text-white bg-success">
+        <div class="p-2 m-1 text-white bg-danger">d-sm-flex</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于sm的设备</div>
+        <div class="p-2 m-1 text-white bg-danger">启用Flex</div>
+    </div>
+    <div class="d-md-flex my-2 p-2 text-white bg-success">
+        <div class="p-2 m-1 text-white bg-danger">d-md-flex</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于md的设备</div>
+        <div class="p-2 m-1 text-white bg-danger">启用Flex</div>
+    </div>
+    <div class="d-lg-flex my-2 p-2 text-white bg-success">
+        <div class="p-2 m-1 text-white bg-danger">d-lg-flex</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于lg的设备</div>
+        <div class="p-2 m-1 text-white bg-danger">启用Flex</div>
+    </div>
+    <div class="d-xl-flex my-2 p-2 text-white bg-success">
+        <div class="p-2 m-1 text-white bg-danger">d-xl-flex</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于xl的设备</div>
+        <div class="p-2 m-1 text-white bg-danger">启用Flex</div>
+    </div>
+    <hr />
+
+    <h4>响应式 Flex-InLine</h4>
+    <div><div class="d-inline-flex my-2 p-2 text-white bg-danger">d-inline-flex: 永远 inline</div></div>
+    <div><div class="d-sm-inline-flex my-2 p-2 text-white bg-danger">d-sm-inline-flex: 在小于等于sm的设备 inline</div></div>
+    <div><div class="d-md-inline-flex my-2 p-2 text-white bg-danger">d-md-inline-flex: 在小于等于md的设备 inline</div></div>
+    <div><div class="d-lg-inline-flex my-2 p-2 text-white bg-danger">d-lg-inline-flex: 在小于等于lg的设备 inline</div></div>
+    <div><div class="d-xl-inline-flex my-2 p-2 text-white bg-danger">d-xl-inline-flex: 在小于等于xl的设备 inline</div></div>
+    <hr />
+
+    <h4>响应式行 flex-row</h4>
+    <div class="d-flex flex-row bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">flex-row</div>
+        <div class="p-2 m-1 text-white bg-danger">Flex Item</div>
+        <div class="p-2 m-1 text-white bg-danger">Flex Item</div>
+    </div>
+    <div class="d-flex flex-sm-row bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">flex-sm-row</div>
+        <div class="p-2 m-1 text-white bg-danger">Flex Item</div>
+        <div class="p-2 m-1 text-white bg-danger">Flex Item</div>
+    </div>
+    <div class="d-flex flex-md-row bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">flex-md-row</div>
+        <div class="p-2 m-1 text-white bg-danger">Flex Item</div>
+        <div class="p-2 m-1 text-white bg-danger">Flex Item</div>
+    </div>
+    <div class="d-flex flex-lg-row bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">flex-lg-row</div>
+        <div class="p-2 m-1 text-white bg-danger">Flex Item</div>
+        <div class="p-2 m-1 text-white bg-danger">Flex Item</div>
+    </div>
+    <div class="d-flex flex-xl-row bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">flex-xl-row</div>
+        <div class="p-2 m-1 text-white bg-danger">Flex Item</div>
+        <div class="p-2 m-1 text-white bg-danger">Flex Item</div>
+    </div>
+    <hr />
+
+    <h4>响应式反转行方向 flex-row-reverse</h4>
+    <div class="d-flex flex-row-reverse bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">flex-row-reverse</div>
+        <div class="p-2 m-1 text-white bg-danger">永远</div>
+        <div class="p-2 m-1 text-white bg-danger">反转行</div>
+    </div>
+    <div class="d-flex flex-sm-row-reverse bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">flex-sm-row-reverse</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于sm的设备</div>
+        <div class="p-2 m-1 text-white bg-danger">反转行</div>
+    </div>
+    <div class="d-flex flex-md-row-reverse bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">flex-md-row-reverse</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于md的设备</div>
+        <div class="p-2 m-1 text-white bg-danger">反转行</div>
+    </div>
+    <div class="d-flex flex-lg-row-reverse bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">flex-lg-row-reverse</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于lg的设备</div>
+        <div class="p-2 m-1 text-white bg-danger">反转行</div>
+    </div>
+    <div class="d-flex flex-xl-row-reverse bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">flex-xl-row-reverse</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于xl的设备</div>
+        <div class="p-2 m-1 text-white bg-danger">反转行</div>
+    </div>
+    <hr />
+
+    <h4>响应式列 flex-column</h4>
+    <div class="d-flex flex-column bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">flex-column</div>
+        <div class="p-2 m-1 text-white bg-danger">永远</div>
+        <div class="p-2 m-1 text-white bg-danger">显示为列</div>
+    </div>
+    <div class="d-flex flex-sm-column bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">flex-sm-column</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于sm的设备</div>
+        <div class="p-2 m-1 text-white bg-danger">显示为列</div>
+    </div>
+    <div class="d-flex flex-md-column bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">flex-md-column</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于md的设备</div>
+        <div class="p-2 m-1 text-white bg-danger">显示为列</div>
+    </div>
+    <div class="d-flex flex-lg-column bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">flex-lg-column</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于lg的设备</div>
+        <div class="p-2 m-1 text-white bg-danger">显示为列</div>
+    </div>
+    <div class="d-flex flex-xl-column bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">flex-xl-column</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于xl的设备</div>
+        <div class="p-2 m-1 text-white bg-danger">显示为列</div>
+    </div>
+    <hr />
+
+    <h4>响应式反转列方向 flex-column-reverse</h4>
+    <div class="d-flex flex-column-reverse bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">flex-column-reverse</div>
+        <div class="p-2 m-1 text-white bg-secondary">永远</div>
+        <div class="p-2 m-1 text-white bg-success">显示为反转列</div>
+    </div>
+    <div class="d-flex flex-sm-column-reverse bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">flex-sm-column-reverse</div>
+        <div class="p-2 m-1 text-white bg-secondary">在大于等于sm的设备</div>
+        <div class="p-2 m-1 text-white bg-success">显示为反转列</div>
+    </div>
+    <div class="d-flex flex-md-column-reverse bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">flex-md-column-reverse</div>
+        <div class="p-2 m-1 text-white bg-secondary">在大于等于md的设备</div>
+        <div class="p-2 m-1 text-white bg-success">显示为反转列</div>
+    </div>
+    <div class="d-flex flex-lg-column-reverse bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">flex-lg-column-reverse</div>
+        <div class="p-2 m-1 text-white bg-secondary">在大于等于lg的设备</div>
+        <div class="p-2 m-1 text-white bg-success">显示为反转列</div>
+    </div>
+    <div class="d-flex flex-xl-column-reverse bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">flex-xl-column-reverse</div>
+        <div class="p-2 m-1 text-white bg-secondary">在大于等于xl的设备</div>
+        <div class="p-2 m-1 text-white bg-success">显示为反转列</div>
+    </div>
+    <hr />
+
+    <div class="container-fluid p-0">
+        <h4>justify-content-*-* 响应式水平布局</h4>
+        <h5 class="text-muted">justify-content-start 响应式水平布局</h5>
+        <div class="d-flex my-2 bg-warning justify-content-start">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-start</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">永远</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">start</div>
+        </div>
+        <div class="d-flex my-2 bg-warning justify-content-sm-start">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-sm-start</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于sm的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">start</div>
+        </div>
+        <div class="d-flex my-2 bg-warning justify-content-md-start">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-md-start</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于md的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">start</div>
+        </div>
+        <div class="d-flex my-2 bg-warning justify-content-lg-start">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-lg-start</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于lg的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">start</div>
+        </div>
+        <div class="d-flex my-2 bg-warning justify-content-xl-start">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-xl-start</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于xl的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">start</div>
+        </div>
+        <hr />
+
+        <h5 class="text-muted">justify-content-end 响应式水平布局</h5>
+        <div class="d-flex my-2 bg-warning justify-content-end">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-end</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">永远</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">end</div>
+        </div>
+        <div class="d-flex my-2 bg-warning justify-content-sm-end">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-sm-end</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于sm的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">end</div>
+        </div>
+        <div class="d-flex my-2 bg-warning justify-content-md-end">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-md-end</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于md的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">end</div>
+        </div>
+        <div class="d-flex my-2 bg-warning justify-content-lg-end">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-lg-end</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于lg的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">end</div>
+        </div>
+        <div class="d-flex my-2 bg-warning justify-content-xl-end">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-xl-end</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于xl的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">end</div>
+        </div>
+        <hr />
+
+        <h5 class="text-muted">justify-content-center 响应式水平布局</h5>
+        <div class="d-flex my-2 bg-warning justify-content-center">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-center</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">永远</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">center</div>
+        </div>
+        <div class="d-flex my-2 bg-warning justify-content-sm-center">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-sm-center</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于sm的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">center</div>
+        </div>
+        <div class="d-flex my-2 bg-warning justify-content-md-center">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-md-center</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于md的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">center</div>
+        </div>
+        <div class="d-flex my-2 bg-warning justify-content-lg-center">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-lg-center</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于lg的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">center</div>
+        </div>
+        <div class="d-flex my-2 bg-warning justify-content-xl-center">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-xl-center</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于xl的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">center</div>
+        </div>
+        <hr />
+
+        <h5 class="text-muted">justify-content-between 响应式水平布局</h5>
+        <div class="d-flex my-2 bg-warning justify-content-between">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-between</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">永远</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">between</div>
+        </div>
+        <div class="d-flex my-2 bg-warning justify-content-sm-between">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-sm-between</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于sm的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">between</div>
+        </div>
+        <div class="d-flex my-2 bg-warning justify-content-md-between">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-md-between</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于md的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">between</div>
+        </div>
+        <div class="d-flex my-2 bg-warning justify-content-lg-between">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-lg-between</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于lg的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">between</div>
+        </div>
+        <div class="d-flex my-2 bg-warning justify-content-xl-between">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-xl-between</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于xl的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">between</div>
+        </div>
+        <hr />
+
+        <h5 class="text-muted">justify-content-around 响应式水平布局</h5>
+        <div class="d-flex my-2 bg-warning justify-content-around">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-around</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">永远</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">around</div>
+        </div>
+        <div class="d-flex my-2 bg-warning justify-content-sm-around">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-sm-around</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于sm的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">around</div>
+        </div>
+        <div class="d-flex my-2 bg-warning justify-content-md-around">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-md-around</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于md的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">around</div>
+        </div>
+        <div class="d-flex my-2 bg-warning justify-content-lg-around">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-lg-around</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于lg的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">around</div>
+        </div>
+        <div class="d-flex my-2 bg-warning justify-content-xl-around">
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify-content-xl-around</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于xl的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">around</div>
+        </div>
+    </div>
+    <hr />
+
+    <div class="container-fluid p-0">
+        <h4>align-items-*-* 响应式垂直布局</h4>
+        <h5 class="text-muted">align-items-start 响应式垂直布局</h5>
+        <div class="d-flex my-2 bg-warning align-items-start" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-start</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">永远</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">start</div>
+        </div>
+        <div class="d-flex my-2 bg-warning align-items-sm-start" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-sm-start</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于sm的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">start</div>
+        </div>
+        <div class="d-flex my-2 bg-warning align-items-md-start" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-md-start</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于md的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">start</div>
+        </div>
+        <div class="d-flex my-2 bg-warning align-items-lg-start" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-lg-start</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于lg的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">start</div>
+        </div>
+        <div class="d-flex my-2 bg-warning align-items-xl-start" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-xl-start</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于xl的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">start</div>
+        </div>
+        <hr />
+
+        <h5 class="text-muted">align-items-end 响应式垂直布局</h5>
+        <div class="d-flex my-2 bg-warning align-items-end" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-end</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">永远</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">end</div>
+        </div>
+        <div class="d-flex my-2 bg-warning align-items-sm-end" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-sm-end</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于sm的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">end</div>
+        </div>
+        <div class="d-flex my-2 bg-warning align-items-md-end" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-md-end</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于md的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">end</div>
+        </div>
+        <div class="d-flex my-2 bg-warning align-items-lg-end" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-lg-end</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于lg的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">end</div>
+        </div>
+        <div class="d-flex my-2 bg-warning align-items-xl-end" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-xl-end</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">justify</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于xl的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">end</div>
+        </div>
+        <hr />
+
+        <h5 class="text-muted">align-items-center 响应式垂直布局</h5>
+        <div class="d-flex my-2 bg-warning align-items-center" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-center</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">永远</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">center</div>
+        </div>
+        <div class="d-flex my-2 bg-warning align-items-sm-center" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-sm-center</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于sm的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">center</div>
+        </div>
+        <div class="d-flex my-2 bg-warning align-items-md-center" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-md-center</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于md的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">center</div>
+        </div>
+        <div class="d-flex my-2 bg-warning align-items-lg-center" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-lg-center</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于lg的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">center</div>
+        </div>
+        <div class="d-flex my-2 bg-warning align-items-xl-center" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-xl-center</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于xl的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">center</div>
+        </div>
+        <hr />
+
+        <h5 class="text-muted">align-items-baseline 响应式垂直布局</h5>
+        <div class="d-flex my-2 bg-warning align-items-baseline" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-baseline</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">永远</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">baseline</div>
+        </div>
+        <div class="d-flex my-2 bg-warning align-items-sm-baseline" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-sm-baseline</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于sm的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">baseline</div>
+        </div>
+        <div class="d-flex my-2 bg-warning align-items-md-baseline" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-md-baseline</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于md的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">baseline</div>
+        </div>
+        <div class="d-flex my-2 bg-warning align-items-lg-baseline" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-lg-baseline</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于lg的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">baseline</div>
+        </div>
+        <div class="d-flex my-2 bg-warning align-items-xl-baseline" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-xl-baseline</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于xl的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">baseline</div>
+        </div>
+        <hr />
+
+        <h5 class="text-muted">align-items-stretch 响应式垂直布局</h5>
+        <div class="d-flex my-2 bg-warning align-items-stretch" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-stretch</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">永远</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">stretch</div>
+        </div>
+        <div class="d-flex my-2 bg-warning align-items-sm-stretch" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-sm-stretch</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于sm的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">stretch</div>
+        </div>
+        <div class="d-flex my-2 bg-warning align-items-md-stretch" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-md-stretch</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于md的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">stretch</div>
+        </div>
+        <div class="d-flex my-2 bg-warning align-items-lg-stretch" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-lg-stretch</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于lg的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">stretch</div>
+        </div>
+        <div class="d-flex my-2 bg-warning align-items-xl-stretch" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-items-xl-stretch</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于xl的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">stretch</div>
+        </div>
+    </div>
+    <hr />
+
+    <div class="container-fluid p-0">
+        <h4>align-self-*-* 响应式垂直布局</h4>
+        <h5 class="text-muted">align-self-start 响应式垂直布局</h5>
+        <div class="d-flex my-2 bg-warning align-self-start" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-start</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-start">永远</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">start</div>
+        </div>
+        <div class="d-flex my-2 bg-warning" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-sm-start</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-sm-start">在大于等于sm的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">start</div>
+        </div>
+        <div class="d-flex my-2 bg-warning" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-md-start</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-md-start">在大于等于md的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">start</div>
+        </div>
+        <div class="d-flex my-2 bg-warning" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-lg-start</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-lg-start">在大于等于lg的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">start</div>
+        </div>
+        <div class="d-flex my-2 bg-warning" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-xl-start</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-xl-start">在大于等于xl的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">start</div>
+        </div>
+        <hr />
+
+        <h5 class="text-muted">align-self-end 响应式垂直布局</h5>
+        <div class="d-flex my-2 bg-warning align-self-end" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-end</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-end">永远</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">end</div>
+        </div>
+        <div class="d-flex my-2 bg-warning" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-sm-end</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-sm-end">在大于等于sm的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">end</div>
+        </div>
+        <div class="d-flex my-2 bg-warning" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-md-end</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-md-end">在大于等于md的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">end</div>
+        </div>
+        <div class="d-flex my-2 bg-warning" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-lg-end</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-lg-end">在大于等于lg的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">end</div>
+        </div>
+        <div class="d-flex my-2 bg-warning" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-xl-end</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-xl-end">justify</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">在大于等于xl的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">end</div>
+        </div>
+        <hr />
+
+        <h5 class="text-muted">align-self-center 响应式垂直布局</h5>
+        <div class="d-flex my-2 bg-warning align-self-center" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-center</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-center">永远</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">center</div>
+        </div>
+        <div class="d-flex my-2 bg-warning" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-sm-center</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-sm-center">在大于等于sm的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">center</div>
+        </div>
+        <div class="d-flex my-2 bg-warning" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-md-center</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-md-center">在大于等于md的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">center</div>
+        </div>
+        <div class="d-flex my-2 bg-warning" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-lg-center</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-lg-center">在大于等于lg的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">center</div>
+        </div>
+        <div class="d-flex my-2 bg-warning" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-xl-center</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-xl-center">在大于等于xl的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">center</div>
+        </div>
+        <hr />
+
+        <h5 class="text-muted">align-self-baseline 响应式垂直布局</h5>
+        <div class="d-flex my-2 bg-warning align-self-baseline" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-baseline</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-baseline">永远</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">baseline</div>
+        </div>
+        <div class="d-flex my-2 bg-warning" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-sm-baseline</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-sm-baseline">在大于等于sm的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">baseline</div>
+        </div>
+        <div class="d-flex my-2 bg-warning" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-md-baseline</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-md-baseline">在大于等于md的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">baseline</div>
+        </div>
+        <div class="d-flex my-2 bg-warning" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-lg-baseline</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-lg-baseline">在大于等于lg的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">baseline</div>
+        </div>
+        <div class="d-flex my-2 bg-warning" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-xl-baseline</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-xl-baseline">在大于等于xl的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">baseline</div>
+        </div>
+        <hr />
+
+        <h5 class="text-muted">align-self-stretch 响应式垂直布局</h5>
+        <div class="d-flex my-2 bg-warning align-self-stretch" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-stretch</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-stretch">永远</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">stretch</div>
+        </div>
+        <div class="d-flex my-2 bg-warning" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-sm-stretch</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-sm-stretch">在大于等于sm的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">stretch</div>
+        </div>
+        <div class="d-flex my-2 bg-warning" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-md-stretch</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-md-stretch">在大于等于md的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">stretch</div>
+        </div>
+        <div class="d-flex my-2 bg-warning" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-lg-stretch</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-lg-stretch">在大于等于lg的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">stretch</div>
+        </div>
+        <div class="d-flex my-2 bg-warning" style="height:6rem;">
+            <div class="p-2 px-4 m-1 text-white bg-danger">align-self-xl-stretch</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger align-self-xl-stretch">在大于等于xl的设备</div>
+            <div class="p-2 px-4 m-1 text-white bg-danger">stretch</div>
+        </div>
+    </div>
+    <hr />
+
+    <h4>填充</h4>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-fill">flex-fill</div>
+        <div class="p-2 m-1 text-white bg-danger flex-fill">永远</div>
+        <div class="p-2 m-1 text-white bg-danger flex-fill">填充</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-sm-fill">flex-sm-fill</div>
+        <div class="p-2 m-1 text-white bg-danger flex-sm-fill">在大于等于sm的设备</div>
+        <div class="p-2 m-1 text-white bg-danger flex-sm-fill">填充</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-md-fill">flex-md-fill</div>
+        <div class="p-2 m-1 text-white bg-danger flex-md-fill">在大于等于md的设备</div>
+        <div class="p-2 m-1 text-white bg-danger flex-md-fill">填充</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-lg-fill">flex-lg-fill</div>
+        <div class="p-2 m-1 text-white bg-danger flex-lg-fill">在大于等于lg的设备</div>
+        <div class="p-2 m-1 text-white bg-danger flex-lg-fill">填充</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-xl-fill">flex-xl-fill</div>
+        <div class="p-2 m-1 text-white bg-danger flex-xl-fill">在大于等于xl的设备</div>
+        <div class="p-2 m-1 text-white bg-danger flex-xl-fill">填充</div>
+    </div>
+    <hr />
+
+    <h4>生长(grow)</h4>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-grow-0">flex-grow-0</div>
+        <div class="p-2 m-1 text-white bg-danger">永远</div>
+        <div class="p-2 m-1 text-white bg-danger">不生长</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-sm-grow-0">flex-sm-grow-0</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于sm的设备</div>
+        <div class="p-2 m-1 text-white bg-danger">不生长</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-md-grow-0">flex-md-grow-0</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于md的设备</div>
+        <div class="p-2 m-1 text-white bg-danger">不生长</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-lg-grow-0">flex-lg-grow-0</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于lg的设备</div>
+        <div class="p-2 m-1 text-white bg-danger">不生长</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-xl-grow-0">flex-xl-grow-0</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于xl的设备</div>
+        <div class="p-2 m-1 text-white bg-danger">不生长</div>
+    </div>
+
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-grow-1">flex-grow-1</div>
+        <div class="p-2 m-1 text-white bg-danger">永远</div>
+        <div class="p-2 m-1 text-white bg-danger">生长</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-sm-grow-1">flex-sm-grow-1</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于sm的设备</div>
+        <div class="p-2 m-1 text-white bg-danger">生长</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-md-grow-1">flex-md-grow-1</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于md的设备</div>
+        <div class="p-2 m-1 text-white bg-danger">生长</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-lg-grow-1">flex-lg-grow-1</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于lg的设备</div>
+        <div class="p-2 m-1 text-white bg-danger">生长</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-xl-grow-1">flex-xl-grow-1</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于xl的设备</div>
+        <div class="p-2 m-1 text-white bg-danger">生长</div>
+    </div>
+    <hr />
+
+    <h4>萎缩(shrink)</h4>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-shrink-0">flex-shrink-0 文本内容以萎缩</div>
+        <div class="p-2 m-1 text-white bg-danger">永远 文本内容以萎缩</div>
+        <div class="p-2 m-1 text-white bg-danger">不萎缩 文本内容以萎缩</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-sm-shrink-0">flex-sm-shrink-0 文本内容以萎缩</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于sm的设备 文本内容以萎缩</div>
+        <div class="p-2 m-1 text-white bg-danger">不萎缩 文本内容以萎缩</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-md-shrink-0">flex-md-shrink-0 文本内容以萎缩</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于md的设备 文本内容以萎缩</div>
+        <div class="p-2 m-1 text-white bg-danger">不萎缩 文本内容以萎缩</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-lg-shrink-0">flex-lg-shrink-0 文本内容以萎缩</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于lg的设备 文本内容以萎缩</div>
+        <div class="p-2 m-1 text-white bg-danger">不萎缩 文本内容以萎缩</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-xl-shrink-0">flex-xl-shrink-0 文本内容以萎缩</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于xl的设备 文本内容以萎缩</div>
+        <div class="p-2 m-1 text-white bg-danger">不萎缩 文本内容以萎缩</div>
+    </div>
+
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-shrink-1">flex-shrink-1 文本内容以萎缩</div>
+        <div class="p-2 m-1 text-white bg-danger">永远 文本内容以萎缩</div>
+        <div class="p-2 m-1 text-white bg-danger">萎缩 文本内容以萎缩</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-sm-shrink-1">flex-sm-shrink-1 文本内容以萎缩</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于sm的设备 文本内容以萎缩</div>
+        <div class="p-2 m-1 text-white bg-danger">萎缩 文本内容以萎缩</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-md-shrink-1">flex-md-shrink-1 文本内容以萎缩</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于md的设备 文本内容以萎缩</div>
+        <div class="p-2 m-1 text-white bg-danger">萎缩 文本内容以萎缩</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-lg-shrink-1">flex-lg-shrink-1 文本内容以萎缩</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于lg的设备 文本内容以萎缩</div>
+        <div class="p-2 m-1 text-white bg-danger">萎缩 文本内容以萎缩</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-xl-shrink-1">flex-xl-shrink-1 文本内容以萎缩</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于xl的设备 文本内容以萎缩</div>
+        <div class="p-2 m-1 text-white bg-danger">萎缩 文本内容以萎缩</div>
+    </div>
+    <hr />
+
+    <h4>自动外边距</h4>
+    <h5 class="text-muted">mr-auto ml-auto mt-auto mb-auto</h5>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 mr-auto text-white bg-danger">mr-auto</div>
+        <div class="p-2 m-1 text-white bg-danger">永远</div>
+        <div class="p-2 m-1 text-white bg-danger">自动调整右外边界</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 mr-sm-auto text-white bg-danger">mr-auto</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于sm的设备</div>
+        <div class="p-2 m-1 text-white bg-danger">自动调整右外边界</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 mr-md-auto text-white bg-danger">mr-auto</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于md的设备</div>
+        <div class="p-2 m-1 text-white bg-danger">自动调整右外边界</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 mr-lg-auto text-white bg-danger">mr-auto</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于lg的设备</div>
+        <div class="p-2 m-1 text-white bg-danger">自动调整右外边界</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 ml-xl-auto text-white bg-danger">ml-auto</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于xl的设备</div>
+        <div class="p-2 m-1 text-white bg-danger">自动调整右外边界</div>
+    </div>
+
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">ml-auto</div>
+        <div class="p-2 m-1 ml-auto text-white bg-danger">永远</div>
+        <div class="p-2 m-1 text-white bg-danger">自动调整左外边界</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">ml-auto</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于sm的设备</div>
+        <div class="p-2 m-1 ml-sm-auto text-white bg-danger">自动调整左外边界</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">ml-auto</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于md的设备</div>
+        <div class="p-2 m-1 ml-md-auto text-white bg-danger">自动调整左外边界</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">ml-auto</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于lg的设备</div>
+        <div class="p-2 m-1 ml-lg-auto text-white bg-danger">自动调整左外边界</div>
+    </div>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger">ml-auto</div>
+        <div class="p-2 m-1 text-white bg-danger">在大于等于xl的设备</div>
+        <div class="p-2 m-1 ml-xl-auto text-white bg-danger">自动调整左外边界</div>
+    </div>
+    <hr />
+
+    <h4>包装(Wrap)</h4>
+    <div class="d-flex my-2 bg-warning flex-wrap">
+        <div class="p-2 px-5 m-1 text-white bg-danger">flex-wrap 1</div>
+        <div class="p-2 px-5 m-1 text-white bg-danger">flex-wrap 2</div>
+        <div class="p-2 px-5 m-1 text-white bg-danger">flex-wrap 3</div>
+        <div class="p-2 px-5 m-1 text-white bg-danger">flex-wrap 4</div>
+        <div class="p-2 px-5 m-1 text-white bg-danger">flex-wrap 5</div>
+        <div class="p-2 px-5 m-1 text-white bg-danger">flex-wrap 6</div>
+    </div>
+
+    <div class="d-flex my-2 bg-warning flex-nowrap">
+        <div class="p-2 px-5 m-1 text-white bg-danger">flex-nowrap 1</div>
+        <div class="p-2 px-5 m-1 text-white bg-danger">flex-nowrap 2</div>
+        <div class="p-2 px-5 m-1 text-white bg-danger">flex-nowrap 3</div>
+        <div class="p-2 px-5 m-1 text-white bg-danger">flex-nowrap 4</div>
+        <div class="p-2 px-5 m-1 text-white bg-danger">flex-nowrap 5</div>
+        <div class="p-2 px-5 m-1 text-white bg-danger">flex-nowrap 6</div>
+    </div>
+
+    <div class="d-flex my-2 bg-warning flex-wrap-reverse">
+        <div class="p-2 px-5 m-1 text-white bg-danger">flex-wrap-reverse 1</div>
+        <div class="p-2 px-5 m-1 text-white bg-danger">flex-wrap-reverse 2</div>
+        <div class="p-2 px-5 m-1 text-white bg-danger">flex-wrap-reverse 3</div>
+        <div class="p-2 px-5 m-1 text-white bg-danger">flex-wrap-reverse 4</div>
+        <div class="p-2 px-5 m-1 text-white bg-danger">flex-wrap-reverse 5</div>
+        <div class="p-2 px-5 m-1 text-white bg-danger">flex-wrap-reverse 6</div>
+    </div>
+    <hr />
+
+    <h4>align-content-*-* 响应式垂直布局</h4>
+    <div class="d-flex my-2 bg-warning align-content-start flex-wrap" style="height:8rem;">
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">align-content-start</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+    </div>
+    <div class="d-flex my-2 bg-warning align-content-end flex-wrap" style="height:8rem;">
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">align-content-end</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+    </div>
+    <div class="d-flex my-2 bg-warning align-content-center flex-wrap" style="height:8rem;">
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">align-content-center</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+    </div>
+    <div class="d-flex my-2 bg-warning align-content-between flex-wrap" style="height:8rem;">
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">align-content-stretch</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+    </div>
+    <div class="d-flex my-2 bg-warning align-content-around flex-wrap" style="height:8rem;">
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">align-content-around</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+        <div class="p-2 px-5 px-4 m-1 text-white bg-danger">flex-wrap</div>
+    </div>
+    <hr />
+
+    <h4>排序(Order)</h4>
+    <h5>order-*-(0-12|first|next)</h5>
+    <div class="d-flex bg-warning my-2">
+        <div class="p-2 m-1 text-white bg-danger flex-fill order-0">Order-0</div>
+        <div class="p-2 m-1 text-white bg-danger flex-fill order-2">Order-2</div>
+        <div class="p-2 m-1 text-white bg-danger flex-fill order-1">Order-1</div>
+        <div class="p-2 m-1 text-white bg-danger flex-fill order-first">Order-first</div>
+        <div class="p-2 m-1 text-white bg-danger flex-fill order-last">Order-last</div>
+        <div class="p-2 m-1 text-white bg-danger flex-fill order-12">Order-12</div>
+        <div class="p-2 m-1 text-white bg-danger flex-fill order-10">Order-10</div>
+        <div class="p-2 m-1 text-white bg-danger flex-fill order-11">Order-11</div>
+    </div>
+    <hr />
+</div>
