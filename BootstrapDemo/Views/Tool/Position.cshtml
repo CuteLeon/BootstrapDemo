@@ -1,0 +1,65 @@
+﻿<div class="container">
+    <p class="display-4">定位</p>
+    <h4>定位</h4>
+
+    <dl class="row">
+        <dt class="col-sm-3 text-right">Position-Static</dt>
+        <dd class="col-sm-9">
+            <p class="mb-1">HTML 元素的默认值，即没有定位，遵循正常的文档流对象。</p>
+            <p>静态定位的元素不会受到 top, bottom, left, right影响。</p>
+        </dd>
+        <dt class="col-sm-3 text-right">Position-Fixed</dt>
+        <dd class="col-sm-9">
+            <p class="mb-1">元素的位置相对于浏览器窗口是固定位置。</p>
+            <p>即使窗口是滚动的它也不会移动。</p>
+            <p class="text-muted">
+                Fixed 定位在 IE7 和 IE8 下需要描述 !DOCTYPE 才能支持。
+                Fixed定位使元素的位置与文档流无关，因此不占据空间。
+                Fixed定位的元素和其他元素重叠。
+            </p>
+        </dd>
+        <dt class="col-sm-3 text-right">Position-Relative</dt>
+        <dd class="col-sm-9">
+            <p class="mb-1">相对定位元素的定位是相对其正常位置。</p>
+            <p>移动相对定位元素，但它原本所占的空间不会改变。</p>
+        </dd>
+        <dt class="col-sm-3 text-right">Position-Absolute</dt>
+        <dd class="col-sm-9">
+            <p class="mb-1">绝对定位的元素的位置相对于最近的已定位父元素，如果元素没有已定位的父元素，那么它的位置相对于 HTML</p>
+            <p class="text-muted">
+                absolute 定位使元素的位置与文档流无关，因此不占据空间。
+                absolute 定位的元素和其他元素重叠。
+            </p>
+        </dd>
+        <dt class="col-sm-3 text-right">Position-Sticky</dt>
+        <dd class="col-sm-9">
+            <p class="mb-1">基于用户的滚动位置来定位。</p>
+            <p class="mb-1">粘性定位的元素是依赖于用户的滚动，在 position:relative 与 position:fixed 定位之间切换。</p>
+            <p class="text-muted">
+                它的行为就像 position:relative;
+                而当页面滚动超出目标区域时，它的表现就像 position:fixed，它会固定在目标位置。
+            </p>
+        </dd>
+    </dl>
+
+    <img src="~/image/MathildaLeon.jpg" class="position-sticky m-5 shadow-lg img-thumbnail rounded-pill" style="top:5rem;bottom:5rem;left:20rem;"/>
+    <p class="position-sticky m-5 text-danger font-weight-bold" style="top:5rem;bottom:5rem;left:20rem;">Position-Sticky</p>
+
+    <img src="~/image/Dream.jpg" style="width:140px" class="fixed-top m-5 shadow-lg img-thumbnail rounded-pill" />
+    <p class="fixed-top m-5 text-danger font-weight-bold">Fixed-Top</p>
+
+    <img src="~/image/Dream.jpg" style="width:140px" class="fixed-bottom m-5 shadow-lg img-thumbnail rounded-pill" />
+    <p class="fixed-bottom m-5 text-danger font-weight-bold">Fixed-Bottom</p>
+
+    <img src="~/image/LeonMathilda.jpg" class="position-absolute shadow-lg m-5 img-thumbnail rounded-pill" style="right:0rem; bottom:3rem" />
+    <p class="position-absolute m-5 text-danger font-weight-bold" style="right:0rem; bottom:3rem">Position Absolute</p>
+
+    <img src="~/image/LeonMathilda.jpg" class="position-fixed shadow-lg m-5 img-thumbnail rounded-pill" style="right:0rem; top:3rem" />
+    <p class="position-fixed m-5 text-danger font-weight-bold" style="right:0rem; top:3rem">Position Fixed</p>
+
+    <img src="~/image/Mathilda.jpg" class="position-static shadow-lg m-5 img-thumbnail rounded-pill" />
+    <p class="position-static mt-n5 text-danger font-weight-bold">Position Static</p>
+
+    <img src="~/image/Mathilda.jpg" class="position-relative shadow-lg m-5 img-thumbnail rounded-pill" style="left:5rem;top:0rem" />
+    <p class="position-relative mt-n5 text-danger font-weight-bold">Position Relative</p>
+</div>
