@@ -2,7 +2,7 @@
 
 @if ((this.Model?.Count ?? 0) > 0)
 {
-    <div class="m-5 fixed-bottom" style="width:54px">
+    <div class="m-5 position-fixed" style="bottom:5rem;right:0rem;z-index:2147483647;">
         <div class="btn-group-vertical shadow-lg btn-group-lg">
             @foreach (var iconSet in this.Model)
             {
