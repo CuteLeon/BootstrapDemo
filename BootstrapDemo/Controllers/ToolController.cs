@@ -43,5 +43,10 @@ namespace BootstrapDemo.Controllers
         {
             return View();
         }
+
+        public IActionResult Interaction()
+        {
+            return View();
+        }
     }
 }
