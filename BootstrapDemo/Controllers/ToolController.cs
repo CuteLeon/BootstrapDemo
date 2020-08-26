@@ -38,5 +38,10 @@ namespace BootstrapDemo.Controllers
         {
             return View();
         }
+
+        public IActionResult Float()
+        {
+            return View();
+        }
     }
 }
