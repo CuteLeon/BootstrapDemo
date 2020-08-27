@@ -42,8 +42,9 @@
     <script>
         $(document).ready(function () {
             $('.stretched-link').on('click', (e) => {
-                $(e.target).parent().parent().toggleClass('shadow-lg');
-                $(e.target).parent().parent().toggleClass('border-warning');
+                let parentCard = $(e.target).parents('.card');
+                parentCard.toggleClass('shadow-lg');
+                parentCard.toggleClass('border-warning');
             });
         })
     </script>
