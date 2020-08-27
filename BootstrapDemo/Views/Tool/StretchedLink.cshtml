@@ -1,0 +1,50 @@
+﻿<div class="container">
+    <p class="display-4">伸展链接</p>
+    <h4>将链接伸展到容器</h4>
+
+    <div class="card-columns">
+        <div class="card">
+            <img src="/image/Dream.jpg" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">带有伸展链接的卡片</h5>
+                <p class="card-text">使用伸展链接在整个容器响应链接的事件。</p>
+                <button class="btn btn-outline-primary btn-block stretched-link">伸展链接</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/image/LeonMathilda.jpg" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">带有伸展链接的卡片</h5>
+                <p class="card-text">使用伸展链接在整个容器响应链接的事件。</p>
+                <button class="btn btn-outline-primary btn-block stretched-link">伸展链接</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/image/Mathilda.jpg" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">带有伸展链接的卡片</h5>
+                <p class="card-text">使用伸展链接在整个容器响应链接的事件。</p>
+                <button class="btn btn-outline-primary btn-block stretched-link">伸展链接</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/image/MathildaLeon.jpg" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">带有伸展链接的卡片</h5>
+                <p class="card-text">使用伸展链接在整个容器响应链接的事件。</p>
+                <button class="btn btn-outline-primary btn-block stretched-link">伸展链接</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('.stretched-link').on('click', (e) => {
+                $(e.target).parent().parent().toggleClass('shadow-lg');
+                $(e.target).parent().parent().toggleClass('border-warning');
+            });
+        })
+    </script>
+}
