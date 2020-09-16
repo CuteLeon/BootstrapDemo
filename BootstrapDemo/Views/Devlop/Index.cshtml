@@ -2,31 +2,71 @@
 
 <!-- 桌面 -->
 <div class="container-fluid p-0 position-fixed flex-wrap" style="overflow: hidden; height: 100%; width: 100%;
-    background-image: url(image/Carousel-4.jpg); background-size: cover; background-position-y:center; background-position-x: center;">
-    
-    <div class="fixed-top">
-        <!-- 顶部栏 -->
-        <div class="container-fluid justify-content-between d-inline-flex p-0 shadow-sm" style="height: 30px; backdrop-filter: blur(30px) grayscale(0.3);">
-            <button class="btn btn-warning btn-sm p-0 my-auto" style="height:24px;">测试按钮</button>
+    background-image: url(image/Carousel-3.jpg); background-size: cover; background-position-y:center; background-position-x: center;">
 
-            <div class="rounded-pill d-inline-block bg-light text-dark border px-2">
-                <p class="fas fa-user-astronaut text-primary" data-container="body" data-toggle="tooltip" data-placement="top" title="用户信息"></p>
-                <span class="border-left mx-1"></span>
-                <p class="fas fa-wifi" data-container="body" data-toggle="tooltip" data-placement="top" title="Wifi: 开启"></p>
-                <p class="fas fa-battery-full" data-container="body" data-toggle="tooltip" data-placement="top" title="电量: 100%"></p>
-                <p class="fas fa-charging-station" data-container="body" data-toggle="tooltip" data-placement="top" title="电量: 100%"></p>
-                <p class="fas fa-bell" data-container="body" data-toggle="tooltip" data-placement="top" title="声音: 开启"></p>
-                <p class="fas fa-volume-up" data-container="body" data-toggle="tooltip" data-placement="top" title="声音: 开启"></p>
-                <p class="fas fa-adjust" data-container="body" data-toggle="tooltip" data-placement="top" title="主题: 自动"></p>
-                <p class="fab fa-usb" data-container="body" data-toggle="tooltip" data-placement="top" title="USB: 已连接"></p>
-                <p class="fas fa-broadcast-tower" data-container="body" data-toggle="tooltip" data-placement="top" title="热点: 开启"></p>
-                <p class="fas fa-camera" data-container="body" data-toggle="tooltip" data-placement="top" title="屏幕截图"></p>
-                <p class="fas fa-cloud-sun-rain" data-container="body" data-toggle="tooltip" data-placement="top" title="实时天气"></p>
-                <span class="border-left mx-1"></span>
-                <p class="fas fa-lock" data-container="body" data-toggle="tooltip" data-placement="top" title="锁定系统"></p>
-                <p class="fas fa-cog" data-container="body" data-toggle="tooltip" data-placement="top" title="系统设置"></p>
-                <p class="fas fa-calendar-alt" data-container="body" data-toggle="tooltip" data-placement="top" title="日期： @DateTime.Now.ToString()"> @DateTime.Now.ToString("HH:mm")</p>
-                <p class="fas fa-power-off text-danger" data-container="body" data-toggle="tooltip" data-placement="top" title="退出系统"></p>
+    <div class="fixed-top user-select-none">
+        <!-- 顶部栏 -->
+        <div class="container-fluid justify-content-between d-inline-flex p-0 shadow-sm" style="height: 30px; backdrop-filter: blur(15px) opacity(0.8);">
+            <!-- 菜单栏 -->
+            <nav class="navbar navbar-expand p-0 navbar-dark">
+                <div class="navbar-brand p-0 ml-2">
+                    <img class="img-fluid" src="~/image/LogoImageSmall.png" />
+                    <span>Hack System</span>
+                </div>
+
+                <ul class="navbar-nav text-nowrap">
+                    <li class="nav-item active">
+                        <a role="button" class="nav-link">文件</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a role="button" class="nav-link">编辑</a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a role="button" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">
+                            视图
+                        </a>
+                        <div class="dropdown-menu">
+                            <a role="button" class="dropdown-item">顶部栏</a>
+                            <a role="button" class="dropdown-item">菜单栏</a>
+                            <a role="button" class="dropdown-item">状态栏</a>
+                            <div class="dropdown-divider"></div>
+                            <a role="button" class="dropdown-item">图标容器</a>
+                            <div class="dropdown-divider"></div>
+                            <a role="button" class="dropdown-item">程序坞</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" class="nav-link disabled">调试</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <form class="d-none d-md-block form-inline mx-2 align-self-center">
+                <input class="form-control bg-transparent small text-white" style="height:24px;" type="search" placeholder="搜索..." aria-label="Search">
+            </form>
+
+            <!-- 状态栏 -->
+            <div class="rounded-pill bg-light text-dark d-flex border px-2">
+                <div class="text-nowrap align-self-center">
+                    <p class="mb-0 fas fa-user-astronaut text-primary" data-container="body" data-toggle="tooltip" data-placement="top" title="用户信息"></p>
+                    <span class="border-left mx-1"></span>
+                    <p class="mb-0 fas fa-wifi" data-container="body" data-toggle="tooltip" data-placement="top" title="Wifi: 开启"></p>
+                    <p class="mb-0 fas fa-battery-full" data-container="body" data-toggle="tooltip" data-placement="top" title="电量: 100%"></p>
+                    <p class="mb-0 fas fa-charging-station" data-container="body" data-toggle="tooltip" data-placement="top" title="电量: 100%"></p>
+                    <p class="mb-0 fas fa-bell" data-container="body" data-toggle="tooltip" data-placement="top" title="声音: 开启"></p>
+                    <p class="mb-0 fas fa-volume-up" data-container="body" data-toggle="tooltip" data-placement="top" title="声音: 开启"></p>
+                    <p class="mb-0 fas fa-adjust" data-container="body" data-toggle="tooltip" data-placement="top" title="主题: 自动"></p>
+                    <p class="mb-0 fab fa-usb" data-container="body" data-toggle="tooltip" data-placement="top" title="USB: 已连接"></p>
+                    <p class="mb-0 fas fa-broadcast-tower" data-container="body" data-toggle="tooltip" data-placement="top" title="热点: 开启"></p>
+                    <p class="mb-0 fas fa-camera" data-container="body" data-toggle="tooltip" data-placement="top" title="屏幕截图"></p>
+                    <p class="mb-0 fas fa-cloud-sun-rain" data-container="body" data-toggle="tooltip" data-placement="top" title="实时天气"></p>
+                    <span class="border-left mx-1"></span>
+                    <p class="mb-0 fas fa-lock" data-container="body" data-toggle="tooltip" data-placement="top" title="锁定系统"></p>
+                    <p class="mb-0 fas fa-cog" data-container="body" data-toggle="tooltip" data-placement="top" title="系统设置"></p>
+                    <p class="mb-0 fas fa-calendar-alt text-nowrap" data-container="body" data-toggle="tooltip" data-placement="top" title="日期： @DateTime.Now.ToString()"> @DateTime.Now.ToString("HH:mm")</p>
+                    <span class="border-left mx-1"></span>
+                    <p class="mb-0 fas fa-power-off text-danger" data-container="body" data-toggle="tooltip" data-placement="top" title="退出系统"></p>
+                </div>
             </div>
         </div>
     </div>
