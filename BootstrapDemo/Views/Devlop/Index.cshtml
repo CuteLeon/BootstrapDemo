@@ -2,12 +2,32 @@
 
 <!-- 桌面 -->
 <div class="container-fluid p-0 position-fixed flex-wrap" style="overflow: hidden; height: 100%; width: 100%;
-    background-image: url(image/Carousel-2.jpg); background-size: cover; background-position-y:center; background-position-x: center;">
+    background-image: url(image/Carousel-4.jpg); background-size: cover; background-position-y:center; background-position-x: center;">
+    
     <div class="fixed-top">
         <!-- 顶部栏 -->
-        <div class="container-fluid bg-light" style="height:30px">
-            <UserStateComponent />
-            <button class="btn btn-warning btn-sm">测试按钮</button>
+        <div class="container-fluid justify-content-between d-inline-flex p-0 shadow-sm" style="height: 30px; backdrop-filter: blur(30px) grayscale(0.3);">
+            <button class="btn btn-warning btn-sm p-0 my-auto" style="height:24px;">测试按钮</button>
+
+            <div class="rounded-pill d-inline-block bg-light text-dark border px-2">
+                <p class="fas fa-user-astronaut text-primary" data-container="body" data-toggle="tooltip" data-placement="top" title="用户信息"></p>
+                <span class="border-left mx-1"></span>
+                <p class="fas fa-wifi" data-container="body" data-toggle="tooltip" data-placement="top" title="Wifi: 开启"></p>
+                <p class="fas fa-battery-full" data-container="body" data-toggle="tooltip" data-placement="top" title="电量: 100%"></p>
+                <p class="fas fa-charging-station" data-container="body" data-toggle="tooltip" data-placement="top" title="电量: 100%"></p>
+                <p class="fas fa-bell" data-container="body" data-toggle="tooltip" data-placement="top" title="声音: 开启"></p>
+                <p class="fas fa-volume-up" data-container="body" data-toggle="tooltip" data-placement="top" title="声音: 开启"></p>
+                <p class="fas fa-adjust" data-container="body" data-toggle="tooltip" data-placement="top" title="主题: 自动"></p>
+                <p class="fab fa-usb" data-container="body" data-toggle="tooltip" data-placement="top" title="USB: 已连接"></p>
+                <p class="fas fa-broadcast-tower" data-container="body" data-toggle="tooltip" data-placement="top" title="热点: 开启"></p>
+                <p class="fas fa-camera" data-container="body" data-toggle="tooltip" data-placement="top" title="屏幕截图"></p>
+                <p class="fas fa-cloud-sun-rain" data-container="body" data-toggle="tooltip" data-placement="top" title="实时天气"></p>
+                <span class="border-left mx-1"></span>
+                <p class="fas fa-lock" data-container="body" data-toggle="tooltip" data-placement="top" title="锁定系统"></p>
+                <p class="fas fa-cog" data-container="body" data-toggle="tooltip" data-placement="top" title="系统设置"></p>
+                <p class="fas fa-calendar-alt" data-container="body" data-toggle="tooltip" data-placement="top" title="日期： @DateTime.Now.ToString()"> @DateTime.Now.ToString("HH:mm")</p>
+                <p class="fas fa-power-off text-danger" data-container="body" data-toggle="tooltip" data-placement="top" title="退出系统"></p>
+            </div>
         </div>
     </div>
 
@@ -139,3 +159,75 @@
         </div>
     </div>
 </div>
+
+@section Scripts{
+    <script>
+        var dockEvents = {
+            mouseOverIcon: function (e) {
+                $(e).prev().animate({
+                    width: '100px',
+                    height: '100px',
+                    margin: '-25px 0 0 0',
+                }, 150);
+            },
+            mouseOutIcon: function (e) {
+                $(e).prev().animate({
+                    width: '75px',
+                    height: '75px',
+                    margin: '0px 0 0 0',
+                }, 150);
+            },
+            mouseDownIcon: function (e) {
+                $(e).prev().animate({
+                    opacity: 1,
+                    margin: '-50px 0 0 0',
+                }, 150);
+            },
+            mouseUpIcon: function (e) {
+                $(e).prev().animate({
+                    opacity: 1,
+                    margin: '-25px 0 0 0',
+                }, 150);
+            }
+        };
+        var drawerEvents = {
+            mouseOverIcon: function (e) {
+                let icon = $(e).parent().parent();
+                let focused = icon.is(':focus');
+                if (focused) return;
+
+                icon.addClass('shadow');
+                icon.css('background', 'rgba(255, 255, 255, 0.2)');
+                icon.css('backdrop-filter', 'blur(5px)');
+            },
+            mouseOutIcon: function (e) {
+                let icon = $(e).parent().parent();
+                let focused = icon.is(':focus');
+                if (focused) return;
+
+                icon.removeClass('shadow');
+                icon.css('background', 'rgba(255, 255, 255, 0)');
+                icon.css('backdrop-filter', '');
+            },
+            mouseDownIcon: function (e) {
+                let icon = $(e).parent().parent();
+                icon.css('background', 'rgba(255, 255, 255, 0.5)');
+            },
+            mouseUpIcon: function (e) {
+                let icon = $(e).parent().parent();
+                icon.css('background', 'rgba(255, 255, 255, 0.2)');
+            },
+            focusIcon: function (e) {
+                let icon = $(e);
+                icon.css('background', 'rgba(255, 255, 255, 0.2)');
+                icon.css('backdrop-filter', 'blur(5px)');
+            },
+            blurIcon: function (e) {
+                let icon = $(e);
+                icon.css('background', 'rgba(255, 255, 255, 0)');
+                icon.css('backdrop-filter', '');
+            }
+        };
+        $('[data-toggle="tooltip"]').tooltip();
+    </script>
+}
