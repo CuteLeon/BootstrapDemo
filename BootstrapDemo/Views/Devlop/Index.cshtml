@@ -16,79 +16,124 @@
 
                 <ul class="navbar-nav text-nowrap">
                     <li class="nav-item active">
-                        <a role="button" class="nav-link">文件</a>
+                        <a role="button" class="nav-link">主页</a>
                     </li>
-                    <li class="nav-item active">
-                        <a role="button" class="nav-link">编辑</a>
-                    </li>
-                    <li class="nav-item dropdown active">
-                        <a role="button" class="nav-link dropdown-toggle" data-toggle="dropdown">视图</a>
+                    <li class="nav-item dropdown">
+                        <a role="button" class="nav-link dropdown-toggle" data-toggle="dropdown" data-submenu>文件</a>
                         <div class="dropdown-menu">
-                            <a role="button" class="dropdown-item">顶部栏</a>
-                            <a role="button" class="dropdown-item">菜单栏</a>
-                            <a role="button" class="dropdown-item">状态栏</a>
+                            <a role="button" class="dropdown-item">新文件</a>
+                            <a role="button" class="dropdown-item">打开文件</a>
+                            <a role="button" class="dropdown-item">保存文件</a>
                             <div class="dropdown-divider"></div>
-                            <a role="button" class="dropdown-item">图标容器</a>
+                            <div class="dropdown dropright dropdown-submenu">
+                                <a role="button" class="dropdown-item dropdown-toggle">最近的文件</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" class="custom-control-input" name="RecentFilesGroup" checked id="recentFile1Radio">
+                                            <label class="custom-control-label" for="recentFile1Radio">最近的文件_1</label>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-item">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" class="custom-control-input" name="RecentFilesGroup" checked id="recentFile2Radio">
+                                            <label class="custom-control-label" for="recentFile2Radio">最近的文件_2</label>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-item">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" class="custom-control-input" name="RecentFilesGroup" id="recentFile3Radio">
+                                            <label class="custom-control-label" for="recentFile3Radio">最近的文件_3</label>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-item">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" class="custom-control-input" name="RecentFilesGroup" id="recentFile4Radio">
+                                            <label class="custom-control-label" for="recentFile4Radio">最近的文件_4</label>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-item">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" class="custom-control-input" name="RecentFilesGroup" disabled id="recentFile5Radio">
+                                            <label class="custom-control-label" for="recentFile5Radio">最近的文件_5</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="dropdown-divider"></div>
-                            <a role="button" class="dropdown-item">程序坞</a>
+                            <a role="button" class="dropdown-item">关闭文件</a>
                         </div>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a role="button" class="nav-link dropdown-toggle" data-toggle="dropdown" data-submenu>编辑</a>
+                        <div class="dropdown-menu">
+                            <a role="button" class="dropdown-item">剪切</a>
+                            <a role="button" class="dropdown-item">复制</a>
+                            <a role="button" class="dropdown-item">粘贴</a>
+                            <a role="button" class="dropdown-item">删除</a>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown dropright dropdown-submenu">
+                                <a role="button" class="dropdown-item dropdown-toggle">选择</a>
+                                <div class="dropdown-menu">
+                                    <a role="button" class="dropdown-item">全选</a>
+                                    <a role="button" class="dropdown-item">全不选</a>
+                                    <a role="button" class="dropdown-item">反选</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <a role="button" class="dropdown-item">查找</a>
+                            <a role="button" class="dropdown-item">替换</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a role="button" class="nav-link dropdown-toggle" data-toggle="dropdown" data-submenu>视图</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-item">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" checked id="topBarCheck">
+                                    <label class="custom-control-label" for="topBarCheck">顶部栏</label>
+                                </div>
+                            </div>
+                            <div class="dropdown-item">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="menuBarCheck">
+                                    <label class="custom-control-label" for="menuBarCheck">菜单栏</label>
+                                </div>
+                            </div>
+                            <div class="dropdown-item">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="statusBarCheck">
+                                    <label class="custom-control-label" for="statusBarCheck">状态栏</label>
+                                </div>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-item">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" disabled checked id="programDockCheck">
+                                    <label class="custom-control-label" for="programDockCheck">程序坞</label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item d-none">
+                        <a role="button" class="nav-link">已隐藏</a>
+                    </li>
                     <li class="nav-item">
-                        <a role="button" class="nav-link disabled">调试</a>
+                        <a role="button" class="nav-link disabled">已禁用</a>
                     </li>
                     <li class="nav-item active">
                         <a role="button" class="nav-link text-warning">测试</a>
                     </li>
                     <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-submenu>多级菜单</a>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-header">一级头部-1</div>
-                                <a class="dropdown-item" role="button">一级菜单项-1</a>
-                                <a class="dropdown-item" role="button">一级菜单项-2</a>
-                                <div class="dropdown-divider"></div>
-                                <div class="dropdown-header">一级头部-2</div>
-                                <div class="dropdown dropright dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" role="button" data-toggle="dropdown">一级菜单项-3</a>
-                                    <div class="dropdown-menu">
-                                        <div class="dropdown-header">二级头部</div>
-                                        <a class="dropdown-item" role="button">二级菜单项-1</a>
-                                        <div class="dropdown dropright dropdown-submenu">
-                                            <a class="dropdown-item dropdown-toggle" role="button">二级菜单项-2</a>
-                                            <div class="dropdown-menu">
-                                                <a class="dropdown-item" role="button">三级菜单项-1</a>
-                                                <a class="dropdown-item" role="button">三级菜单项-2</a>
-                                                <a class="dropdown-item" role="button">三级菜单项-3</a>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" role="button">二级菜单项-3</a>
-                                        <div class="dropdown dropleft dropdown-submenu">
-                                            <a class="dropdown-item dropdown-toggle" role="button">二级菜单项-4</a>
-                                            <div class="dropdown-menu">
-                                                <a class="dropdown-item" role="button">三级菜单项-4</a>
-                                                <a class="dropdown-item" role="button">三级菜单项-5</a>
-                                                <div class="dropdown dropright dropdown-submenu">
-                                                    <a class="dropdown-item dropdown-toggle" role="button">三级菜单项-6</a>
-                                                    <div class="dropdown-menu">
-                                                        <a class="dropdown-item" role="button">四级菜单项-1</a>
-                                                        <a class="dropdown-item" role="button">四级菜单项-2</a>
-                                                        <a class="dropdown-item" role="button">四级菜单项-3</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dropdown dropleft dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" role="button">一级菜单项-4</a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" role="button">二级菜单项-5</a>
-                                        <a class="dropdown-item" role="button">二级菜单项-6</a>
-                                        <a class="dropdown-item" role="button">二级菜单项-7</a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="custom-control custom-checkbox nav-link pl-4">
+                            <input type="checkbox" class="custom-control-input" disabled="disabled" name="RecentFilesGroup1" id="desktopCheckBox_1">
+                            <label class="custom-control-label" for="desktopCheckBox_1">复选框</label>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="custom-control custom-radio nav-link pl-4">
+                            <input type="radio" class="custom-control-input" name="DesktopRadioGroup" id="desktopRadio_1">
+                            <label class="custom-control-label" for="desktopRadio_1">单选框</label>
                         </div>
                     </li>
                 </ul>
