@@ -62,11 +62,10 @@
         <button id="customePopoverButton3" type="button" class="btn btn-success">点击显示弹出框</button>
         <button id="customePopoverButton4" type="button" data-toggle="popover" title="自定义标题-4" data-content='<img src="/image/Mathilda.jpg" class="img-fluid" />' class="btn btn-success">点击显示弹出框</button>
     </div>
-    <div class="text-center m-3" id="myContent">
+    <div class="d-none" id="myContent">
         <img src="~/image/Mathilda.jpg" class="img-fluid" />
     </div>
-    <hr />
-    <div class="m-3" id="myTemplate">
+    <div class="d-none" id="myTemplate">
         <div class="popover border border-white shadow-lg" role="tooltip">
             <div class="arrow text-white"></div>
             <h3 class="popover-header bg-primary text-white"></h3>
@@ -96,7 +95,7 @@
                 html: true,
                 title: '自定义模板-2',
                 template: $('#myTemplate').html(),
-                content: '<img src="/image/Mathilda.jpg" class="img-fluid" />'
+                content: $('#myContent').html()
             });
 
             $('.expandButton').on('click', (e) => {
