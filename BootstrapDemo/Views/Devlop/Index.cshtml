@@ -272,6 +272,91 @@
         </div>
     </div>
 
+    <!-- 程序层 -->
+    <div class="position-fixed w-100 h-100 user-select-none" style="top:0px;padding-top:30px; overflow:hidden;pointer-events:none;">
+        <!-- 模态窗口 -->
+        <div class="modal-dialog m-0 position-fixed dragtarget" role="dialog" style="left:3rem;top:3rem;">
+            <div class="modal-content">
+                <div class="modal-header draggable">
+                    <h5 class="modal-title" id="exampleModalLabel">标题</h5>
+                    <button type="button" class="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-auto">
+                            <i class="fas fa-4x fa-info-circle text-primary m-2"></i>
+                        </div>
+                        <div class="col">
+                            模态窗口内容，点击背景自动关闭模态窗口。<br />
+                            模态窗口内容，点击背景自动关闭模态窗口。<br />
+                            模态窗口内容，点击背景自动关闭模态窗口。
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary">关闭</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+        <!-- 模态窗口 -->
+        <div class="modal-dialog m-0 position-fixed dragtarget shadow" role="dialog" style="left:20rem;top:15rem;">
+            <div class="modal-content">
+                <div class="modal-header draggable">
+                    <h5 class="modal-title" id="exampleModalLabel">标题</h5>
+                    <button type="button" class="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-auto">
+                            <i class="fas fa-4x fa-info-circle text-primary m-2"></i>
+                        </div>
+                        <div class="col">
+                            模态窗口内容，点击背景自动关闭模态窗口。<br />
+                            模态窗口内容，点击背景自动关闭模态窗口。<br />
+                            模态窗口内容，点击背景自动关闭模态窗口。
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary">关闭</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+        <!-- 模态窗口 -->
+        <div class="modal-dialog m-0 position-fixed dragtarget" role="dialog" style="left:40rem;top:30rem;">
+            <div class="modal-content">
+                <div class="modal-header draggable">
+                    <h5 class="modal-title" id="exampleModalLabel">标题</h5>
+                    <button type="button" class="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-auto">
+                            <i class="fas fa-4x fa-info-circle text-primary m-2"></i>
+                        </div>
+                        <div class="col">
+                            模态窗口内容，点击背景自动关闭模态窗口。<br />
+                            模态窗口内容，点击背景自动关闭模态窗口。<br />
+                            模态窗口内容，点击背景自动关闭模态窗口。
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary">关闭</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- 程序坞 -->
     <div class="d-none d-md-flex justify-content-center fixed-bottom mb-1 mb-md-3" style="pointer-events:none;">
         <div class="border-bottom border-white px-5 rounded-pill shadow" style="pointer-events: auto; backdrop-filter: blur(10px);">
@@ -396,5 +481,45 @@
         };
         $('[data-toggle="tooltip"]').tooltip();
         $('[data-submenu]').submenupicker();
+
+        let dragData;
+        let dragTarget;
+        $('.draggable').on('mousedown', (e) => {
+            if (e.button === 0) {
+                dragTarget = $(e.delegateTarget).parents('.dragtarget')[0];
+                if (dragTarget === undefined || dragTarget === null) return;
+
+                let currentPosition = { X: $(dragTarget).offset().left, Y: $(dragTarget).offset().top };
+                dragData = {
+                    diffX: e.clientX - currentPosition.X,
+                    diffY: e.clientY - currentPosition.Y,
+                };
+
+                $(e.delegateTarget).on('mousemove', this.onDragMouseMove);
+                $(e.delegateTarget).one('mouseup', this.onDragMouseUp);
+            }
+            else {
+                dragData = null;
+                dragTarget = null;
+            }
+        });
+
+        var onDragMouseMove = function (e) {
+            if (e.button === 0) {
+                if (dragTarget !== undefined &&
+                    dragTarget !== null) {
+                    console.log(dragData);
+                    $(dragTarget).css('left', e.clientX - dragData.diffX);
+                    $(dragTarget).css('top', e.clientY - dragData.diffY);
+                }
+            } else {
+                this.onDragMouseUp(e);
+            }
+        };
+        var onDragMouseUp = function (e) {
+            dragData = null;
+            dragTarget = null;
+            $(e.delegateTarget).off('mousemove', this.onDragMouseMove);
+        };
     </script>
 }
