@@ -496,7 +496,7 @@
                 };
 
                 $(document).on('mousemove', this.onDragMouseMove);
-                $(e.delegateTarget).one('mouseup', this.onDragMouseUp);
+                $(document).one('mouseup', this.onDragMouseUp);
             }
             else {
                 dragData = null;
