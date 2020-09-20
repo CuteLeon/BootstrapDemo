@@ -481,9 +481,9 @@
             }
         };
 
-        let dragData;
-        let dragTarget;
         var dragEvents = {
+            dragData: null,
+            dragTarget: null,
             mouseDragStart: function (e) {
                 let $event = $.event.fix(e);
                 if ($event.button === 0) {
