@@ -329,14 +329,14 @@
         <div class="position-fixed user-select-none flex-nowrap text-nowrap"
              style="padding:8px; left:15rem;top:10rem;width:40rem;height:25rem;pointer-events:auto;">
 
-            <div class="position-absolute" style="width:16px;height:16px; left:0px; top:0px; cursor:nw-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)"></div>
-            <div class="position-absolute" style="height: 8px; left: 16px; top: 0px; right:16px; cursor: n-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)"></div>
-            <div class="position-absolute" style="width: 16px; height: 16px; right: 0px; top: 0px; cursor: ne-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)"></div>
-            <div class="position-absolute" style="width:8px;left:0px;top:16px;bottom:16px; cursor:w-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)"></div>
-            <div class="position-absolute" style="width:8px;top:16px;right:0px;bottom:16px; cursor:e-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)"></div>
-            <div class="position-absolute" style="width:16px;height:16px;left:0px; bottom:0px;cursor:sw-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)"></div>
-            <div class="position-absolute" style="height:8px;left:16px;right:16px; bottom: 0px; cursor: s-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)"></div>
-            <div class="position-absolute" style="width:16px;height:16px;right:0px;bottom:0px;cursor:se-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)"></div>
+            <div class="position-absolute" style="width:16px;height:16px; left:0px; top:0px; cursor:nw-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)" ontouchstart="resizeEvents.touchResizeStart(event)"></div>
+            <div class="position-absolute" style="height: 8px; left: 16px; top: 0px; right:16px; cursor: n-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)" ontouchstart="resizeEvents.touchResizeStart(event)"></div>
+            <div class="position-absolute" style="width: 16px; height: 16px; right: 0px; top: 0px; cursor: ne-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)" ontouchstart="resizeEvents.touchResizeStart(event)"></div>
+            <div class="position-absolute" style="width:8px;left:0px;top:16px;bottom:16px; cursor:w-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)" ontouchstart="resizeEvents.touchResizeStart(event)"></div>
+            <div class="position-absolute" style="width:8px;top:16px;right:0px;bottom:16px; cursor:e-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)" ontouchstart="resizeEvents.touchResizeStart(event)"></div>
+            <div class="position-absolute" style="width:16px;height:16px;left:0px; bottom:0px;cursor:sw-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)" ontouchstart="resizeEvents.touchResizeStart(event)"></div>
+            <div class="position-absolute" style="height:8px;left:16px;right:16px; bottom: 0px; cursor: s-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)" ontouchstart="resizeEvents.touchResizeStart(event)"></div>
+            <div class="position-absolute" style="width:16px;height:16px;right:0px;bottom:0px;cursor:se-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)" ontouchstart="resizeEvents.touchResizeStart(event)"></div>
 
             <div class="modal-dialog m-0 flex-fill shadow" role="dialog" style="max-width:none;height:100%;">
                 <div class="modal-content border-0 bg-dark text-white" style="height: 100%;">
@@ -529,6 +529,7 @@
             resizeData: null,
             resizeTarget: null,
             mouseResizeMoveMethod: null,
+            touchResizeMoveMethod: null,
             mouseResizeStart: function (e) {
                 let $event = $.event.fix(e);
                 if ($event.button === 0) {
@@ -547,54 +548,54 @@
                     switch (resizeData.direction) {
                         case 'nw-resize':
                             {
-                                resizeData.diffX = $event.clientX - resizeData.left,
-                                    resizeData.diffY = $event.clientY - resizeData.top,
-                                    mouseResizeMoveMethod = resizeEvents.NW_Resize;
+                                resizeData.diffX = $event.clientX - resizeData.left;
+                                resizeData.diffY = $event.clientY - resizeData.top;
+                                mouseResizeMoveMethod = resizeEvents.mouse_NW_Resize;
                                 break;
                             }
                         case 'n-resize':
                             {
-                                resizeData.diffY = $event.clientY - resizeData.top,
-                                    mouseResizeMoveMethod = resizeEvents.N_Resize;
+                                resizeData.diffY = $event.clientY - resizeData.top;
+                                mouseResizeMoveMethod = resizeEvents.mouse_N_Resize;
                                 break;
                             }
                         case 'ne-resize':
                             {
-                                resizeData.diffX = resizeData.right - $event.clientX,
-                                    resizeData.diffY = $event.clientY - resizeData.top,
-                                    mouseResizeMoveMethod = resizeEvents.NE_Resize;
+                                resizeData.diffX = resizeData.right - $event.clientX;
+                                resizeData.diffY = $event.clientY - resizeData.top;
+                                mouseResizeMoveMethod = resizeEvents.mouse_NE_Resize;
                                 break;
                             }
                         case 'w-resize':
                             {
-                                resizeData.diffX = $event.clientX - resizeData.left,
-                                    mouseResizeMoveMethod = resizeEvents.W_Resize;
+                                resizeData.diffX = $event.clientX - resizeData.left;
+                                mouseResizeMoveMethod = resizeEvents.mouse_W_Resize;
                                 break;
                             }
                         case 'e-resize':
                             {
-                                resizeData.diffX = resizeData.right - $event.clientX,
-                                    mouseResizeMoveMethod = resizeEvents.E_Resize;
+                                resizeData.diffX = resizeData.right - $event.clientX;
+                                mouseResizeMoveMethod = resizeEvents.mouse_E_Resize;
                                 break;
                             }
                         case 'sw-resize':
                             {
-                                resizeData.diffX = $event.clientX - resizeData.left,
-                                    resizeData.diffY = resizeData.bottom - $event.clientY,
-                                    mouseResizeMoveMethod = resizeEvents.SW_Resize;
+                                resizeData.diffX = $event.clientX - resizeData.left;
+                                resizeData.diffY = resizeData.bottom - $event.clientY;
+                                mouseResizeMoveMethod = resizeEvents.mouse_SW_Resize;
                                 break;
                             }
                         case 's-resize':
                             {
-                                resizeData.diffY = resizeData.bottom - $event.clientY,
-                                    mouseResizeMoveMethod = resizeEvents.S_Resize;
+                                resizeData.diffY = resizeData.bottom - $event.clientY;
+                                mouseResizeMoveMethod = resizeEvents.mouse_S_Resize;
                                 break;
                             }
                         case 'se-resize':
                             {
-                                resizeData.diffX = resizeData.right - $event.clientX,
-                                    resizeData.diffY = resizeData.bottom - $event.clientY,
-                                    mouseResizeMoveMethod = resizeEvents.SE_Resize;
+                                resizeData.diffX = resizeData.right - $event.clientX;
+                                resizeData.diffY = resizeData.bottom - $event.clientY;
+                                mouseResizeMoveMethod = resizeEvents.mouse_SE_Resize;
                                 break;
                             }
                         default: return;
@@ -608,7 +609,7 @@
                     resizeTarget = null;
                 }
             },
-            N_Resize: function (e) {
+            mouse_N_Resize: function (e) {
                 if (resizeTarget !== undefined &&
                     resizeTarget !== null) {
                     let top = e.clientY - resizeData.diffY;
@@ -617,7 +618,7 @@
                     $(resizeTarget).css('height', resizeData.bottom - top);
                 }
             },
-            W_Resize: function (e) {
+            mouse_W_Resize: function (e) {
                 if (resizeTarget !== undefined &&
                     resizeTarget !== null) {
                     let left = e.clientX - resizeData.diffX;
@@ -626,40 +627,62 @@
                     $(resizeTarget).css('width', resizeData.right - left);
                 }
             },
-            E_Resize: function (e) {
+            mouse_E_Resize: function (e) {
                 if (resizeTarget !== undefined &&
                     resizeTarget !== null) {
                     if (resizeData.left <= e.clientX && e.clientX <= document.documentElement.clientWidth)
                         $(resizeTarget).css('width', e.clientX - resizeData.left + resizeData.diffX);
                 }
             },
-            S_Resize: function (e) {
+            mouse_S_Resize: function (e) {
                 if (resizeTarget !== undefined &&
                     resizeTarget !== null) {
                     if (resizeData.top <= e.clientY && e.clientY <= document.documentElement.clientHeight)
                         $(resizeTarget).css('height', e.clientY - resizeData.top + resizeData.diffY);
                 }
             },
-            NW_Resize: function (e) {
-                resizeEvents.N_Resize(e);
-                resizeEvents.W_Resize(e);
+            mouse_NW_Resize: function (e) {
+                resizeEvents.mouse_N_Resize(e);
+                resizeEvents.mouse_W_Resize(e);
             },
-            NE_Resize: function (e) {
-                resizeEvents.N_Resize(e);
-                resizeEvents.E_Resize(e);
+            mouse_NE_Resize: function (e) {
+                resizeEvents.mouse_N_Resize(e);
+                resizeEvents.mouse_E_Resize(e);
             },
-            SW_Resize: function (e) {
-                resizeEvents.S_Resize(e);
-                resizeEvents.W_Resize(e);
+            mouse_SW_Resize: function (e) {
+                resizeEvents.mouse_S_Resize(e);
+                resizeEvents.mouse_W_Resize(e);
             },
-            SE_Resize: function (e) {
-                resizeEvents.S_Resize(e);
-                resizeEvents.E_Resize(e);
+            mouse_SE_Resize: function (e) {
+                resizeEvents.mouse_S_Resize(e);
+                resizeEvents.mouse_E_Resize(e);
             },
+
+            touchResizeStart: function (e) {
+                let $event = $.event.fix(e);
+                let $target = $($event.currentTarget);
+                dragTarget = $target.parents($target.data('resizetarget'))[0];
+                if (dragTarget === undefined || dragTarget === null) return;
+
+                let clientX = $event.touches[0].clientX;
+                let clientY = $event.touches[0].clientY;
+                let currentPosition = { X: $(dragTarget).offset().left, Y: $(dragTarget).offset().top };
+                dragData = {
+                    diffX: clientX - currentPosition.X,
+                    diffY: clientY - currentPosition.Y,
+                };
+
+                document.addEventListener('touchmove', dragEvents.touchDragMove);
+                document.addEventListener('touchend', dragEvents.dragEnd);
+            },
+
             resizeEnd: function (e) {
                 resizeData = null;
                 resizeTarget = null;
+                mouseResizeMoveMethod = null;
+                touchResizeMoveMethod = null;
                 $(document).off('mousemove', mouseResizeMoveMethod);
+                document.removeEventListener('touchmove', touchResizeMoveMethod);
             }
         };
         $('[data-toggle="tooltip"]').tooltip();
