@@ -227,7 +227,7 @@
         <!-- 模态窗口 -->
         <div class="modal-dialog m-0 position-fixed shadow flex-nowrap text-nowrap" role="dialog" style="max-width: none; left: 3rem; top: 3rem;">
             <div class="modal-content border-primary bg-transparent">
-                <div class="modal-header" style="backdrop-filter:blur(20px);" onmousedown="dragEvents.mouseDragStart(event)" ontouchstart="dragEvents.touchDragStart(event)" data-dragtarget=".modal-dialog">
+                <div class="modal-header" style="backdrop-filter:blur(20px);" onmousedown="dragEvents.mouseDragStart(event)" ontouchstart="dragEvents.touchDragStart(event)" data-dragtarget=".position-fixed">
                     <h5 class="modal-title" id="exampleModalLabel">标题</h5>
                     <button type="button" class="close">
                         <span aria-hidden="true">&times;</span>
@@ -252,7 +252,7 @@
         <!-- 模态窗口 -->
         <div class="modal-dialog m-0 position-fixed shadow flex-nowrap text-nowrap" role="dialog" style="max-width: none; left: 20rem; top: 15rem;">
             <div class="modal-content border-danger">
-                <div class="modal-header" onmousedown="dragEvents.mouseDragStart(event)" ontouchstart="dragEvents.touchDragStart(event)" data-dragtarget=".modal-dialog">
+                <div class="modal-header" onmousedown="dragEvents.mouseDragStart(event)" ontouchstart="dragEvents.touchDragStart(event)" data-dragtarget=".position-fixed">
                     <h5 class="modal-title" id="exampleModalLabel">标题</h5>
                     <button type="button" class="close">
                         <span aria-hidden="true">&times;</span>
@@ -277,7 +277,7 @@
         <!-- 模态窗口 -->
         <div class="modal-dialog m-0 position-fixed shadow flex-nowrap text-nowrap" role="dialog" style="max-width: none; left: 40rem; top: 30rem;">
             <div class="modal-content bg-transparent" style="backdrop-filter:blur(20px);">
-                <div class="modal-header" onmousedown="dragEvents.mouseDragStart(event)" ontouchstart="dragEvents.touchDragStart(event)" data-dragtarget=".modal-dialog">
+                <div class="modal-header" onmousedown="dragEvents.mouseDragStart(event)" ontouchstart="dragEvents.touchDragStart(event)" data-dragtarget=".position-fixed">
                     <h5 class="modal-title" id="exampleModalLabel">标题</h5>
                     <button type="button" class="close">
                         <span aria-hidden="true">&times;</span>
@@ -326,17 +326,17 @@
         </div>
 
         <!-- Resize 窗口 -->
-        <div class="position-fixed bg-white user-select-none flex-nowrap text-nowrap"
+        <div class="position-fixed user-select-none flex-nowrap text-nowrap"
              style="padding:8px; left:15rem;top:10rem;width:40rem;height:25rem;pointer-events:auto;">
 
-            <div class="position-absolute bg-danger" style="width:16px;height:16px; left:0px; top:0px; cursor:nw-resize"></div>
-            <div class="position-absolute bg-warning" style="height: 8px; left: 16px; top: 0px; right:16px; cursor: n-resize"></div>
-            <div class="position-absolute bg-danger" style="width: 16px; height: 16px; right: 0px; top: 0px; cursor: ne-resize"></div>
-            <div class="position-absolute bg-warning" style="width:8px;left:0px;top:16px;bottom:16px; cursor:w-resize"></div>
-            <div class="position-absolute bg-warning" style="width:8px;top:16px;right:0px;bottom:16px; cursor:e-resize"></div>
-            <div class="position-absolute bg-danger" style="width:16px;height:16px;left:0px; bottom:0px;cursor:sw-resize"></div>
-            <div class="position-absolute bg-warning" style="height:8px;left:16px;right:16px; bottom: 0px; cursor: s-resize"></div>
-            <div class="position-absolute bg-danger" style="width:16px;height:16px;right:0px;bottom:0px;cursor:se-resize"></div>
+            <div class="position-absolute" style="width:16px;height:16px; left:0px; top:0px; cursor:nw-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)"></div>
+            <div class="position-absolute" style="height: 8px; left: 16px; top: 0px; right:16px; cursor: n-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)"></div>
+            <div class="position-absolute" style="width: 16px; height: 16px; right: 0px; top: 0px; cursor: ne-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)"></div>
+            <div class="position-absolute" style="width:8px;left:0px;top:16px;bottom:16px; cursor:w-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)"></div>
+            <div class="position-absolute" style="width:8px;top:16px;right:0px;bottom:16px; cursor:e-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)"></div>
+            <div class="position-absolute" style="width:16px;height:16px;left:0px; bottom:0px;cursor:sw-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)"></div>
+            <div class="position-absolute" style="height:8px;left:16px;right:16px; bottom: 0px; cursor: s-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)"></div>
+            <div class="position-absolute" style="width:16px;height:16px;right:0px;bottom:0px;cursor:se-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)"></div>
 
             <div class="modal-dialog m-0 flex-fill shadow" role="dialog" style="max-width:none;height:100%;">
                 <div class="modal-content border-0 bg-dark text-white" style="height: 100%;">
@@ -523,6 +523,143 @@
                 dragTarget = null;
                 $(document).off('mousemove', dragEvents.mouseDragMove);
                 document.removeEventListener('touchmove', dragEvents.touchDragMove);
+            }
+        };
+        var resizeEvents = {
+            resizeData: null,
+            resizeTarget: null,
+            mouseResizeMoveMethod: null,
+            mouseResizeStart: function (e) {
+                let $event = $.event.fix(e);
+                if ($event.button === 0) {
+                    let $target = $($event.currentTarget);
+                    resizeTarget = $target.parents($target.data('resizetarget'))[0];
+                    if (resizeTarget === undefined || resizeTarget === null) return;
+
+                    let currentOffSet = $(resizeTarget).offset();
+                    resizeData = {
+                        direction: $($event.currentTarget).css('cursor'),
+                        left: currentOffSet.left,
+                        top: currentOffSet.top,
+                        right: currentOffSet.left + $(resizeTarget).outerWidth(),
+                        bottom: currentOffSet.top + $(resizeTarget).outerHeight(),
+                    };
+                    switch (resizeData.direction) {
+                        case 'nw-resize':
+                            {
+                                resizeData.diffX = $event.clientX - resizeData.left,
+                                resizeData.diffY = $event.clientY - resizeData.top,
+                                mouseResizeMoveMethod = resizeEvents.NW_Resize;
+                                break;
+                            }
+                        case 'n-resize':
+                            {
+                                resizeData.diffY = $event.clientY - resizeData.top,
+                                mouseResizeMoveMethod = resizeEvents.N_Resize;
+                                break;
+                            }
+                        case 'ne-resize':
+                            {
+                                resizeData.diffX = resizeData.right - $event.clientX,
+                                resizeData.diffY = $event.clientY - resizeData.top,
+                                mouseResizeMoveMethod = resizeEvents.NE_Resize;
+                                break;
+                            }
+                        case 'w-resize':
+                            {
+                                resizeData.diffX = $event.clientX - resizeData.left,
+                                mouseResizeMoveMethod = resizeEvents.W_Resize;
+                                break;
+                            }
+                        case 'e-resize':
+                            {
+                                resizeData.diffX = resizeData.right - $event.clientX,
+                                mouseResizeMoveMethod = resizeEvents.E_Resize;
+                                break;
+                            }
+                        case 'sw-resize':
+                            {
+                                resizeData.diffX = $event.clientX - resizeData.left,
+                                resizeData.diffY = resizeData.bottom - $event.clientY,
+                                mouseResizeMoveMethod = resizeEvents.SW_Resize;
+                                break;
+                            }
+                        case 's-resize':
+                            {
+                                resizeData.diffY = resizeData.bottom - $event.clientY,
+                                mouseResizeMoveMethod = resizeEvents.S_Resize;
+                                break;
+                            }
+                        case 'se-resize':
+                            {
+                                resizeData.diffX = resizeData.right - $event.clientX,
+                                resizeData.diffY = resizeData.bottom - $event.clientY,
+                                mouseResizeMoveMethod = resizeEvents.SE_Resize;
+                                break;
+                            }
+                        default: return;
+                    }
+
+                    $(document).on('mousemove', mouseResizeMoveMethod);
+                    $(document).one('mouseup', resizeEvents.resizeEnd);
+                }
+                else {
+                    resizeData = null;
+                    resizeTarget = null;
+                }
+            },
+            N_Resize: function (e) {
+                if (resizeTarget !== undefined &&
+                    resizeTarget !== null) {
+                    let top = e.clientY - resizeData.diffY;
+                    if (0 <= e.clientY && e.clientY <= resizeData.bottom)
+                        $(resizeTarget).css('top', top);
+                    $(resizeTarget).css('height', resizeData.bottom - top);
+                }
+            },
+            W_Resize: function (e) {
+                if (resizeTarget !== undefined &&
+                    resizeTarget !== null) {
+                    let left = e.clientX - resizeData.diffX;
+                    if (0 <= e.clientX && e.clientX <= resizeData.right)
+                        $(resizeTarget).css('left', left);
+                    $(resizeTarget).css('width', resizeData.right - left);
+                }
+            },
+            E_Resize: function (e) {
+                if (resizeTarget !== undefined &&
+                    resizeTarget !== null) {
+                    if (resizeData.left <= e.clientX && e.clientX <= document.documentElement.clientWidth)
+                        $(resizeTarget).css('width', e.clientX - resizeData.left + resizeData.diffX);
+                }
+            },
+            S_Resize: function (e) {
+                if (resizeTarget !== undefined &&
+                    resizeTarget !== null) {
+                    if (resizeData.top <= e.clientY && e.clientY <= document.documentElement.clientHeight)
+                        $(resizeTarget).css('height', e.clientY - resizeData.top + resizeData.diffY);
+                }
+            },
+            NW_Resize: function (e) {
+                resizeEvents.N_Resize(e);
+                resizeEvents.W_Resize(e);
+            },
+            NE_Resize: function (e) {
+                resizeEvents.N_Resize(e);
+                resizeEvents.E_Resize(e);
+            },
+            SW_Resize: function (e) {
+                resizeEvents.S_Resize(e);
+                resizeEvents.W_Resize(e);
+            },
+            SE_Resize: function (e) {
+                resizeEvents.S_Resize(e);
+                resizeEvents.E_Resize(e);
+            },
+            resizeEnd: function (e) {
+                resizeData = null;
+                resizeTarget = null;
+                $(document).off('mousemove', mouseResizeMoveMethod);
             }
         };
         $('[data-toggle="tooltip"]').tooltip();
