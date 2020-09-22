@@ -324,6 +324,45 @@
                 </div>
             </div>
         </div>
+
+        <!-- Resize 窗口 -->
+        <div class="position-fixed bg-white user-select-none flex-nowrap text-nowrap"
+             style="padding:8px; left:15rem;top:10rem;width:40rem;height:25rem;pointer-events:auto;">
+
+            <div class="position-absolute bg-danger" style="width:16px;height:16px; left:0px; top:0px; cursor:nw-resize"></div>
+            <div class="position-absolute bg-warning" style="height: 8px; left: 16px; top: 0px; right:16px; cursor: n-resize"></div>
+            <div class="position-absolute bg-danger" style="width: 16px; height: 16px; right: 0px; top: 0px; cursor: ne-resize"></div>
+            <div class="position-absolute bg-warning" style="width:8px;left:0px;top:16px;bottom:16px; cursor:w-resize"></div>
+            <div class="position-absolute bg-warning" style="width:8px;top:16px;right:0px;bottom:16px; cursor:e-resize"></div>
+            <div class="position-absolute bg-danger" style="width:16px;height:16px;left:0px; bottom:0px;cursor:sw-resize"></div>
+            <div class="position-absolute bg-warning" style="height:8px;left:16px;right:16px; bottom: 0px; cursor: s-resize"></div>
+            <div class="position-absolute bg-danger" style="width:16px;height:16px;right:0px;bottom:0px;cursor:se-resize"></div>
+
+            <div class="modal-dialog m-0 flex-fill shadow" role="dialog" style="max-width:none;height:100%;">
+                <div class="modal-content border-0 bg-dark text-white" style="height: 100%;">
+                    <div class="modal-header" onmousedown="dragEvents.mouseDragStart(event)" ontouchstart="dragEvents.touchDragStart(event)" data-dragtarget=".position-fixed">
+                        <h5 class="modal-title" id="exampleModalLabel">标题</h5>
+                        <button type="button" class="close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-inline-block">
+                            <i class="fas fa-4x fa-info-circle text-primary m-2"></i>
+                        </div>
+                        <div class="d-inline-block">
+                            模态窗口内容，点击背景自动关闭模态窗口。<br />
+                            模态窗口内容，点击背景自动关闭模态窗口。<br />
+                            模态窗口内容，点击背景自动关闭模态窗口。
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary">关闭</button>
+                        <button type="button" class="btn btn-primary">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- 程序坞 -->
@@ -484,77 +523,6 @@
                 dragTarget = null;
                 $(document).off('mousemove', dragEvents.mouseDragMove);
                 document.removeEventListener('touchmove', dragEvents.touchDragMove);
-            }
-        };
-        var resizeEvents = {
-            resizeData: null,
-            resizeTarget: null,
-            mouseresizeStart: function (e) {
-                let $event = $.event.fix(e);
-                if ($event.button === 0) {
-                    let $target = $($event.currentTarget);
-                    resizeTarget = $target.parents($target.data('resizetarget'))[0];
-                    if (resizeTarget === undefined || resizeTarget === null) return;
-
-                    let currentPosition = { X: $(resizeTarget).offset().left, Y: $(resizeTarget).offset().top };
-                    resizeData = {
-                        diffX: $event.clientX - currentPosition.X,
-                        diffY: $event.clientY - currentPosition.Y,
-                    };
-
-                    $(document).on('mousemove', resizeEvents.mouseresizeMove);
-                    $(document).one('mouseup', resizeEvents.resizeEnd);
-                }
-                else {
-                    resizeData = null;
-                    resizeTarget = null;
-                }
-            },
-            touchresizeStart: function (e) {
-                let $event = $.event.fix(e);
-                let $target = $($event.currentTarget);
-                resizeTarget = $target.parents($target.data('resizetarget'))[0];
-                if (resizeTarget === undefined || resizeTarget === null) return;
-
-                let clientX = $event.touches[0].clientX;
-                let clientY = $event.touches[0].clientY;
-                let currentPosition = { X: $(resizeTarget).offset().left, Y: $(resizeTarget).offset().top };
-                resizeData = {
-                    diffX: clientX - currentPosition.X,
-                    diffY: clientY - currentPosition.Y,
-                };
-
-                document.addEventListener('touchmove', resizeEvents.touchresizeMove);
-                document.addEventListener('touchend', resizeEvents.resizeEnd);
-            },
-            mouseresizeMove: function (e) {
-                if (e.button === 0) {
-                    if (resizeTarget !== undefined &&
-                        resizeTarget !== null) {
-                        if (0 <= e.clientX && e.clientX <= document.documentElement.clientWidth)
-                            $(resizeTarget).css('left', e.clientX - resizeData.diffX);
-                        if (0 <= e.clientY && e.clientY <= document.documentElement.clientHeight)
-                            $(resizeTarget).css('top', e.clientY - resizeData.diffY);
-                    }
-                }
-            },
-            touchresizeMove: function (e) {
-                let $event = $.event.fix(e);
-                if (resizeTarget !== undefined &&
-                    resizeTarget !== null) {
-                    let clientX = $event.touches[0].clientX;
-                    let clientY = $event.touches[0].clientY;
-                    if (0 <= clientX && clientX <= document.documentElement.clientWidth)
-                        $(resizeTarget).css('left', clientX - resizeData.diffX);
-                    if (0 <= clientY && clientY <= document.documentElement.clientHeight)
-                        $(resizeTarget).css('top', clientY - resizeData.diffY);
-                }
-            },
-            resizeEnd: function (e) {
-                resizeData = null;
-                resizeTarget = null;
-                $(document).off('mousemove', resizeEvents.mouseresizeMove);
-                document.removeEventListener('touchmove', resizeEvents.touchresizeMove);
             }
         };
         $('[data-toggle="tooltip"]').tooltip();
