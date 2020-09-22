@@ -548,53 +548,53 @@
                         case 'nw-resize':
                             {
                                 resizeData.diffX = $event.clientX - resizeData.left,
-                                resizeData.diffY = $event.clientY - resizeData.top,
-                                mouseResizeMoveMethod = resizeEvents.NW_Resize;
+                                    resizeData.diffY = $event.clientY - resizeData.top,
+                                    mouseResizeMoveMethod = resizeEvents.NW_Resize;
                                 break;
                             }
                         case 'n-resize':
                             {
                                 resizeData.diffY = $event.clientY - resizeData.top,
-                                mouseResizeMoveMethod = resizeEvents.N_Resize;
+                                    mouseResizeMoveMethod = resizeEvents.N_Resize;
                                 break;
                             }
                         case 'ne-resize':
                             {
                                 resizeData.diffX = resizeData.right - $event.clientX,
-                                resizeData.diffY = $event.clientY - resizeData.top,
-                                mouseResizeMoveMethod = resizeEvents.NE_Resize;
+                                    resizeData.diffY = $event.clientY - resizeData.top,
+                                    mouseResizeMoveMethod = resizeEvents.NE_Resize;
                                 break;
                             }
                         case 'w-resize':
                             {
                                 resizeData.diffX = $event.clientX - resizeData.left,
-                                mouseResizeMoveMethod = resizeEvents.W_Resize;
+                                    mouseResizeMoveMethod = resizeEvents.W_Resize;
                                 break;
                             }
                         case 'e-resize':
                             {
                                 resizeData.diffX = resizeData.right - $event.clientX,
-                                mouseResizeMoveMethod = resizeEvents.E_Resize;
+                                    mouseResizeMoveMethod = resizeEvents.E_Resize;
                                 break;
                             }
                         case 'sw-resize':
                             {
                                 resizeData.diffX = $event.clientX - resizeData.left,
-                                resizeData.diffY = resizeData.bottom - $event.clientY,
-                                mouseResizeMoveMethod = resizeEvents.SW_Resize;
+                                    resizeData.diffY = resizeData.bottom - $event.clientY,
+                                    mouseResizeMoveMethod = resizeEvents.SW_Resize;
                                 break;
                             }
                         case 's-resize':
                             {
                                 resizeData.diffY = resizeData.bottom - $event.clientY,
-                                mouseResizeMoveMethod = resizeEvents.S_Resize;
+                                    mouseResizeMoveMethod = resizeEvents.S_Resize;
                                 break;
                             }
                         case 'se-resize':
                             {
                                 resizeData.diffX = resizeData.right - $event.clientX,
-                                resizeData.diffY = resizeData.bottom - $event.clientY,
-                                mouseResizeMoveMethod = resizeEvents.SE_Resize;
+                                    resizeData.diffY = resizeData.bottom - $event.clientY,
+                                    mouseResizeMoveMethod = resizeEvents.SE_Resize;
                                 break;
                             }
                         default: return;
