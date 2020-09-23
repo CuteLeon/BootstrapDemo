@@ -216,9 +216,12 @@
         </div>
 
         <!-- 信息面板 -->
-        <div class="rounded-lg border text-nowrap border-white position-fixed" style="top:4rem; left:40rem; backdrop-filter:blur(10px);">
-            <p class="fas fa-circle-notch fa-spin p-2 mb-0 text-light position-fixed float-left" onmousedown="dragEvents.mouseDragStart(event)" ontouchstart="dragEvents.touchDragStart(event)" data-dragtarget=".position-fixed" style="pointer-events: auto; cursor: move;"></p>
-            <p class="display-1 text-white p-3 mb-0 user-select-none">信息面板</p>
+        <div class="rounded-lg border text-nowrap border-white position-fixed text-white" style="top:4rem; left:40rem; backdrop-filter:blur(10px);">
+            <div class="position-fixed float-left p-1" style="pointer-events: auto;">
+                <p class="fas fa-arrows-alt p-1 mb-0" onmousedown="dragEvents.mouseDragStart(event)" ontouchstart="dragEvents.touchDragStart(event)" data-dragtarget=".border" style="cursor: move;"></p>
+                <p class="fas fa-circle-notch fa-spin p-1 mb-0" style="cursor: pointer;"></p>
+            </div>
+            <p class="display-1 p-3 mb-0 user-select-none">信息面板</p>
         </div>
     </div>
 
