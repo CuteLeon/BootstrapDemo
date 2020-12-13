@@ -4,6 +4,7 @@
     <TargetFramework>net5.0</TargetFramework>
     <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
     <ApplicationIcon>wwwroot\favicon.ico</ApplicationIcon>
+    <UserSecretsId>1556284e-b2b7-4dc3-b433-94cf9d9a7f56</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
