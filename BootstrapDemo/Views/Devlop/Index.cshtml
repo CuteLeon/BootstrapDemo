@@ -380,39 +380,50 @@
             </div>
         </div>
         <!-- Resize 窗口 -->
-        <div class="position-fixed user-select-none flex-nowrap text-nowrap"
-             style="padding:8px; left:40rem;top:17rem;pointer-events:auto;">
+        <div class="position-fixed user-select-none flex-nowrap text-nowrap" style="padding: 8px; left: 215px; top: 61px; pointer-events: auto;">
+            <div class="position-absolute" style="width:16px;height:16px;left:0px;top:0px;cursor:nw-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)" ontouchstart="resizeEvents.touchResizeStart(event)"></div><!--!-->
+            <div class="position-absolute" style="height:8px;left:16px;top:0px;right:16px;cursor: n-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)" ontouchstart="resizeEvents.touchResizeStart(event)"></div><!--!-->
+            <div class="position-absolute" style="width:16px;height:16px;right:0px;top:0px;cursor: ne-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)" ontouchstart="resizeEvents.touchResizeStart(event)"></div><!--!-->
+            <div class="position-absolute" style="width:8px;left:0px;top:16px;bottom:16px;cursor:w-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)" ontouchstart="resizeEvents.touchResizeStart(event)"></div><!--!-->
+            <div class="position-absolute" style="width:8px;top:16px;right:0px;bottom:16px;cursor:e-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)" ontouchstart="resizeEvents.touchResizeStart(event)"></div><!--!-->
+            <div class="position-absolute" style="width:16px;height:16px;left:0px;bottom:0px;cursor:sw-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)" ontouchstart="resizeEvents.touchResizeStart(event)"></div><!--!-->
+            <div class="position-absolute" style="height:8px;left:16px;right:16px;bottom:0px;cursor: s-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)" ontouchstart="resizeEvents.touchResizeStart(event)"></div><!--!-->
+            <div class="position-absolute" style="width:16px;height:16px;right:0px;bottom:0px;cursor:se-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)" ontouchstart="resizeEvents.touchResizeStart(event)"></div><!--!-->
 
-            <div class="position-absolute" style="width:16px;height:16px;left:0px;top:0px;cursor:nw-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)" ontouchstart="resizeEvents.touchResizeStart(event)"></div>
-            <div class="position-absolute" style="height:8px;left:16px;top:0px;right:16px;cursor: n-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)" ontouchstart="resizeEvents.touchResizeStart(event)"></div>
-            <div class="position-absolute" style="width:16px;height:16px;right:0px;top:0px;cursor: ne-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)" ontouchstart="resizeEvents.touchResizeStart(event)"></div>
-            <div class="position-absolute" style="width:8px;left:0px;top:16px;bottom:16px;cursor:w-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)" ontouchstart="resizeEvents.touchResizeStart(event)"></div>
-            <div class="position-absolute" style="width:8px;top:16px;right:0px;bottom:16px;cursor:e-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)" ontouchstart="resizeEvents.touchResizeStart(event)"></div>
-            <div class="position-absolute" style="width:16px;height:16px;left:0px;bottom:0px;cursor:sw-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)" ontouchstart="resizeEvents.touchResizeStart(event)"></div>
-            <div class="position-absolute" style="height:8px;left:16px;right:16px;bottom:0px;cursor: s-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)" ontouchstart="resizeEvents.touchResizeStart(event)"></div>
-            <div class="position-absolute" style="width:16px;height:16px;right:0px;bottom:0px;cursor:se-resize" data-resizetarget=".position-fixed" onmousedown="resizeEvents.mouseResizeStart(event)" ontouchstart="resizeEvents.touchResizeStart(event)"></div>
-
-            <div class="modal-dialog m-0 flex-fill shadow" role="dialog" style="max-width:none;height:100%;">
-                <div class="modal-content border-danger bg-dark text-white overflow-hidden" style="height: 100%;">
-                    <div class="modal-header" onmousedown="dragEvents.mouseDragStart(event)" ontouchstart="dragEvents.touchDragStart(event)" data-dragtarget=".position-fixed">
-                        <h5 class="modal-title" id="exampleModalLabel">标题</h5>
-                        <button type="button" class="close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="d-inline-block">
-                            <i class="fas fa-4x fa-info-circle text-primary m-2"></i>
+            <div data-pid="4" class="modal-dialog m-0 flex-fill shadow" role="dialog" style="max-width:none;height:100%;text-shadow:0px 0px 3px #000, 0px 1px 5px #000">
+                <div class="modal-content bg-transparent border-white text-white overflow-hidden" style="height: 100%;backdrop-filter:blur(20px);">
+                    <span onmousedown="dragEvents.mouseDragStart(event)" ontouchstart="dragEvents.touchDragStart(event)" data-dragtarget=".position-fixed" style="">
+                        <div class="modal-header border-0 py-2">
+                            <h5 class="modal-title" id="exampleModalLabel">天气</h5>
+                            <button type="button" class="close"><span aria-hidden="true">×</span></button>
                         </div>
-                        <div class="d-inline-block">
-                            模态窗口内容，点击背景自动关闭模态窗口。<br />
-                            模态窗口内容，点击背景自动关闭模态窗口。<br />
-                            模态窗口内容，点击背景自动关闭模态窗口。
+                    </span>
+                    <div class="modal-body text-center p-2">
+                        <div class="row m-0">
+                            <div class="col-4 row p-0 m-0 border-right">
+                                <div class="col-12">
+                                    <p class="fas fa-cloud-sun-rain fa-5x"></p>
+                                </div>
+                                <div class="col-6">High</div>
+                                <div class="col-6">Low</div>
+                                <div class="col-6">24℃</div>
+                                <div class="col-6">16℃</div>
+                            </div>
+                            <div class="col p-2">
+                                <ul class="list-unstyled p-0">
+                                    @for (int day = 1; day <= 5; day++)
+                                    {
+                                        <li>
+                                            <div class="row m-0">
+                                                <div class="col-4 px-1">@System.DateTime.Today.AddDays(day).ToString("MM/dd")</div>
+                                                <div class="col-3 px-1"><p class="fas fa-sun mb-0"></p></div>
+                                                <div class="col-5 px-1">26℃ ~ 18℃</div>
+                                            </div>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary">关闭</button>
-                        <button type="button" class="btn btn-primary">确定</button>
                     </div>
                 </div>
             </div>
