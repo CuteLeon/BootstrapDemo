@@ -1727,8 +1727,8 @@
                         .on('blur', function (e) {
                             $(this).removeClass("show").hide();
                         });
-                    $('#rightClickContextMenu').attr('tabIndex', -1);
                     $('#rightClickContextMenu').focus();
+                    $('#rightClickContextMenu').attr('tabIndex', -1);
                     //blocks browser default menu
                     return false;
                 });
