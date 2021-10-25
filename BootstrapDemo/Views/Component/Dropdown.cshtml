@@ -1724,17 +1724,14 @@
                             left: left
                         })
                         .addClass("show")
-                        .on('blur', function (e) {
+                        .on("blur click touchend", function () {
                             $(this).removeClass("show").hide();
-                        });
-                    $('#rightClickContextMenu').focus();
-                    $('#rightClickContextMenu').attr('tabIndex', -1);
+                        })
+                        .focus()
+                        .attr('tabIndex', -1);
                     //blocks browser default menu
                     return false;
                 });
-            $('#rightClickContextMenu').on("click touchend", function () {
-                $(this).removeClass("show").hide();
-            });
         })
     </script>
 }
