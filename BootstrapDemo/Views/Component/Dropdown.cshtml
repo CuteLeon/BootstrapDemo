@@ -1680,6 +1680,18 @@
                 </div>
             </div>
         </li>
+        <li>
+            <div class="container">
+                <div class="jumbotron" id="rightClickContextMenuContainer">
+                    <h1>Right click to show menu</h1>
+                    <div class="dropdown-menu dropdown-menu-sm" id="rightClickContextMenu">
+                        <a role="button" class="dropdown-item">Action</a>
+                        <a role="button" class="dropdown-item">Another action</a>
+                        <a role="button" class="dropdown-item">Something else here</a>
+                    </div>
+                </div>
+            </div>
+        </li>
     </ul>
 </div>
 
@@ -1687,6 +1699,7 @@
     <script>
         $(document).ready(function () {
             $('[data-submenu]').submenupicker();
+
             $('.expandButton').on('click', (e) => {
                 $('.dropdown-menu').collapse('show')
             });
@@ -1698,6 +1711,29 @@
             });
             $('.markerButton').on('click', (e) => {
                 $('.dropdown-menu').collapse('update')
+            });
+
+            $('#rightClickContextMenuContainer')
+                .on('contextmenu', function (e) {
+                    var top = e.pageY;
+                    var left = e.pageX;
+                    $("#rightClickContextMenu")
+                        .css({
+                            display: "block",
+                            top: top,
+                            left: left
+                        })
+                        .addClass("show")
+                        .on('blur', function (e) {
+                            $(this).removeClass("show").hide();
+                        });
+                    $('#rightClickContextMenu').attr('tabIndex', -1);
+                    $('#rightClickContextMenu').focus();
+                    //blocks browser default menu
+                    return false;
+                });
+            $('#rightClickContextMenu').on("click touchend", function () {
+                $(this).removeClass("show").hide();
             });
         })
     </script>
